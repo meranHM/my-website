@@ -1,31 +1,93 @@
 import { useEffect, useState } from "react"
 
 const Footer = () => {
-  const [uptime, setUptime] = useState(0)
+  const [uptime, setUptime] = useState<number>(0)
+  const [logs, setLogs] = useState<string[]>([
+    "[SYS] Initializing...",
+    "[NET] Connection secured.",
+    "[SEC] Firewall active."
+  ])
+
   const currentYear = new Date().getFullYear()
-  const fullDate = new Date().toLocaleDateString("en-GB")
+
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const uptimeInterval = setInterval(() => {
       setUptime((prev) => prev + 1)
     }, 1000)
 
-    return () => clearInterval(interval)
+    const logsInterval = setInterval(() => {
+      const newLogs =[
+        "[SYS] Running system diagnostics...",
+        "[NET] Packet transmission: SUCCESS",
+        "[SEC] Intrusion detection: CLEAR",
+        "[NET] 127.0.0.1: Connected",
+        "[SEC] LOGIN ATTEMPT FAILED ⚠",
+      ]
+      const randomLog = newLogs[Math.floor(Math.random() * newLogs.length)]
+
+      setLogs((prevLogs) => {
+        if (randomLog.includes("LOGIN ATTEMPT FAILED")) {
+          return [...prevLogs.slice(-3), randomLog]
+        }
+        return [...prevLogs.slice(-3), randomLog]
+        
+      })
+    }, 8000)
+
+    return () => {
+      clearInterval(uptimeInterval)
+      clearInterval(logsInterval)
+    }
   }, [])
 
   return (
     
 
     <footer
-      className="py-10 container flex flex-col sm:justify-between justify-center items-center gap-10 max-sm:flex-col"
+      className="mt-12 mb-2 py-2 container flex flex-col items-start gap-10 max-sm:flex-col bg-color-footerBlack border-t-[2px] border-[#00ffff4d] tracking-wider"
     >
-      <p>-----------------------------------</p>
-      <p>SYSTEM STATUS: <span className="status">ONLINE ✅</span></p>
-      <p>LAST UPDATE: <span className="status">{fullDate}</span></p>
-      <p>UPTIME: <span className="status">{uptime} SECONDS</span></p>
-      <p>SECURITY LEVEL: <span className="status">ENCRYPTED 🔒</span></p>
-      <p>-----------------------------------</p>
-      <p>&copy; {currentYear} Mehran Shahani | All Rights Reserved</p>
+      <div
+        className="flex w-full gap-x-10 lg:justify-between"
+      >
+        <div>
+          <p>-----------------------------------</p>
+          <p>SYSTEM STATUS:&nbsp;
+            <span className="text-color-neonPurple font-bold ">
+            ONLINE ✅
+            </span>
+          </p>
+          <p>UPTIME:&nbsp;
+            <span className="text-color-neonPurple font-bold ">
+              {uptime} SECONDS
+            </span>
+          </p>
+          <p>SECURITY LEVEL:&nbsp;
+            <span className="text-color-neonPurple font-bold ">
+              ENCRYPTED 🔒
+            </span>
+          </p>
+          <p>-----------------------------------</p>
+
+        </div>
+        <div
+          className="text-sm text-color-neonGreen text-center max-w-[400px] mx-auto h-[100px] gap-2 my-auto overflow-hidden flex flex-col justify-center"
+        >
+          {logs.map((log, index) => (
+            <p 
+              key={index}
+              className={`${log.includes("LOGIN ATTEMPT FAILED") ? "warning" : ""}`}
+            >
+                {log}
+            </p>
+          ))}
+        </div>
+      </div>
+      <div
+        className="flex flex-col items-center justify-center w-full "
+      >
+        <p>&copy; {currentYear} Mehran Shahani | All Rights Reserved</p>
+      </div>
     </footer>
   )
 }

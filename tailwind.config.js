@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { keyframes } from "framer-motion";
+import { keyframes, m } from "framer-motion";
 import { fontFamily } from "tailwindcss/defaultTheme"
 import plugin from "tailwindcss/plugin";
 import { transform } from "typescript";
@@ -14,34 +14,31 @@ export default {
     extend: {
       colors: {
         color: {
-          CyberBlack: "#0A0F1D",
+          cyberBlack: "#0A0F1D",
           neonCyan: "#0FF0FC",
           neonPurple: "#D400FF",
+          neonGreen: "#00FF00",
+          neonBlue: "#007BFF",
+          neonRed: "#FF3131",
+          neonPink: "#FF10F0",
+          neonOrange: "#FF8800",
+          neonYellow: "#F9FF00",
+          neonTeal: "#00FFD1",
+          neonMagenta: "#FF00A6",
+          neonViolet: "#9400FF",
+          neonWhite: "#FFFFFF",
+          neonGold: "#FFD700",
+          neonDeepBlue: "#003BFF",
           terminalBlack: "#080F0F",
           terminalHeader: "#101617",
-          neonGreen: "#00FF00",
-        },
-        stroke: {
-          1: "#26242C",
-        },
-        n: {
-          1: "#FFFFFF",
-          2: "#CAC6DD",
-          3: "#ADA8C3",
-          4: "#757185",
-          5: "#3F3A52",
-          6: "#252134",
-          7: "#15131D",
-          8: "#0E0C15",
-          9: "#474060",
-          10: "#43435C",
-          11: "#1B1B2E",
-          12: "#2E2A41",
-          13: "#6C7275",
+          footerBlack: "#0a0f1df2",
         },
       },
       boxShadow: {
           "tv": "inset 0 0 20px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.4)",
+      },
+      textShadow: {
+        warning: "0 0 10px #FF0000",
       },
       fontFamily: {
         mono: ["var(--font-mono)", ...fontFamily.sans],
@@ -98,7 +95,8 @@ export default {
           "98%": { opacity: "0.2", filter: "blur(3px) contrast(1.8)", transform: "scaleX(1.1)" },
           "99%": { opacity: "0.8", filter: "blur(0.5px)" },
           "100%": { opacity: "1", filter: "none" },
-        }
+        },
+
       },
     },
   },

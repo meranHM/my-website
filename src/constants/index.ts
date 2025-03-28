@@ -1,5 +1,4 @@
 
-
 export const navigation = [
     {
         id: "0",
@@ -94,87 +93,116 @@ export const commands = [
 export const skillSet = [
     {
         id: "0",
-        skill: "HTML",
+        title: "HTML",
         stack: "Frontend",
         category: "Language",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonOrange",
     },
     {
         id: "1",
-        skill: "CSS",
+        title: "CSS",
         stack: "Frontend",
         category: "Language",
-    },
-    {
-        id: "2",
-        skill: "JavaScript",
-        stack: "Frontend",
-        category: "Language",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonDeepBlue",
     },
     {
         id: "3",
-        skill: "Git",
+        title: "Git",
         stack: "Fullstack",
         category: "Tool",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonRed",
+    },
+    {
+        id: "2",
+        title: "JavaScript",
+        stack: "Frontend",
+        category: "Language",
+        size: "col-span-2 row-span-1",
+        color: "text-color-neonYellow",
     },
     {
         id: "4",
-        skill: "TypeScript",
+        title: "TypeScript",
         stack: "Frontend",
         category: "Language",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonBlue",
     },
     {
         id: "5",
-        skill: "React",
+        title: "React",
         stack: "Frontend",
         category: "Framework",
+        size: "col-span-2 row-span-1",
+        color: "text-color-neonCyan",
     },
     {
         id: "6",
-        skill: "React Router",
+        title: "React Router",
         stack: "Frontend",
         category: "Framework",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonWhite",
     },
+
     {
-        id: "7",
-        skill: "SASS",
-        stack: "Frontend",
-        category: "Language",
+        id: "9",
+        title: "Next.js",
+        stack: "Fullstack",
+        category: "Framework",
+        size: "col-span-3 row-span-1",
+        color: "text-color-neonWhite",
     },
     {
         id: "8",
-        skill: "Tailwind CSS",
+        title: "Tailwind CSS",
         stack: "Frontend",
         category: "Framework",
+        size: "col-span-2 row-span-1",
+        color: "text-color-neonTeal",
     },
+
     {
-        id: "9",
-        skill: "Next.js",
-        stack: "Fullstack",
-        category: "Framework",
+        id: "7",
+        title: "SASS",
+        stack: "Frontend",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonPink",
     },
     {
         id: "10",
-        skill: "Framer Motion",
+        title: "Framer Motion",
         stack: "Frontend",
         category: "UI/UX",
+        size: "col-span-2 row-span-1",
+        color: "text-color-neonViolet",
     },
     {
         id: "11",
-        skill: "GSAP",
+        title: "GSAP",
         stack: "Frontend",
         category: "UI/UX",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonGreen",
     },
     {
         id: "12",
-        skill: "Vite",
+        title: "Vite",
         stack: "Frontend",
         category: "Tool",
+        size: "col-span-2 row-span-1",
+        color: "text-color-neonMagenta",
     },
     {
         id: "13",
-        skill: "Webpack",
+        title: "Webpack",
         stack: "Frontend",
         category: "Tool",
+        size: "col-span-1 row-span-1",
+        color: "text-color-neonDeepBlue",
     },
 ]
 
@@ -183,3 +211,4 @@ WELCOME TO THE CYBER GRID`
 
 export const miniTerminalMessage2 = `CORE SYSTEMS INITIALIZED...
 STATUS: ONLINE`
+

@@ -18,7 +18,7 @@
   
   @layer base {
     body {
-      @apply font-mono bg-color-CyberBlack text-color-neonCyan text-base;
+      @apply font-mono bg-color-cyberBlack text-color-neonCyan text-base;
     }
   }
 
@@ -41,6 +41,24 @@
       text-shadow: 0 0 5px #D400FF;
     }
 
+    .skill-card {
+      background-color: rgba(10, 15, 29, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid currentColor;
+      box-shadow: 0 0 15px currentColor;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+
+
+    .skill-name {
+      color: currentColor;
+      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+
     .tv-noise {
       position: absolute;
       width: 100%;
@@ -48,6 +66,19 @@
       background: url("/src//assets/tv-static-2.gif");
       opacity: 0.1;
       mix-blend-mode: overlay;
+    }
+
+    @keyframes neonFlicker{
+      0% { opacity: 0.1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 0.15; }
+    }
+
+    .warning {
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-shadow: 0 0 5px #FF0000;
+      color: #FF0000;
     }
 
     .tv-screen {

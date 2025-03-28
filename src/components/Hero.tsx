@@ -8,7 +8,7 @@ const Hero = () => {
       id="hero"
     >
       <div
-        className="relative overflow-hidden w-[80vw] max-w-[700px] h-[250px] mx-auto mt-5 bg-color-CyberBlack rounded-lg shadow-tv flex items-center"
+        className="relative overflow-hidden w-[80vw] max-w-[700px] h-[250px] mx-auto mt-5 bg-color-cyberBlack rounded-lg shadow-tv flex items-center"
       >
         <div className="tv-noise"></div>
         <h1

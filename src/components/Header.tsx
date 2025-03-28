@@ -3,15 +3,27 @@ import { Link, NavLink, useLocation } from "react-router"
 import { navigation } from "../constants"
 import CommandInput from "./CommandInput"
 import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { HamburgerMenu } from "./HamburgerMenu"
 import MenuSvg from "../assets/svg/MenuSvg"
 
 
 const Header = () => {
+  const [openNavigation, setOpenNavigation] = useState<boolean>(false)
+  const [isVisible, setIsVisible] = useState<boolean>(true)
   const location = useLocation()
-  const [openNavigation, setOpenNavigation] = useState(false)
+  let lastScrollY = 0
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      setIsVisible(scrollY < lastScrollY || scrollY < 50)
+      lastScrollY = scrollY
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -33,7 +45,7 @@ const Header = () => {
 
   return (
     <header 
-        className={`fixed top-0 left-0 w-full z-50 py-2 ${openNavigation ? "bg-color-terminalBlack" : ""}`}
+        className={`fixed top-0 left-0 w-full z-50 py-2 bg-[rgba(10,15,29,0.85)] backdrop-blur-md border-b border-color-neonCyan transition-transform duration-500 ease-in-out ${openNavigation ? "bg-color-terminalBlack" : ""} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
             <Link
