@@ -8,6 +8,7 @@ import Hero from "../components/Hero"
 import Skills from "../components/Skills"
 import ProjectsSection from "../components/ProjectsSection"
 import CTASection from "../components/CTASection"
+import SystemDiagnostic from "../components/SystemDiagnostic"
 
 
 
@@ -27,7 +28,7 @@ const Home = () => {
         anchor="#skills"
         className="mt-36 mb-4 lg:mt-72 "
       />
-      <Skills />
+      <SystemDiagnostic />
       <MiniTerminal 
         message={miniTerminalMessageProjects}
         anchor="#projects"
@@ -40,6 +41,7 @@ const Home = () => {
         className="mt-36"
       />
       <CTASection />
+
     </section>
   )
 }

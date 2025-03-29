@@ -320,4 +320,24 @@ export const projects = [
     },
 ]
 
+// System Diagnostic Content
+export const diagnosticSkills = [
+    { name: "JavaScript", level: 92 },
+    { name: "React", level: 89 },
+    { name: "Next.js", level: 85 },
+    { name: "TypeScript", level: 80 },
+    { name: "Tailwind CSS", level: 90 },
+    { name: "Framer Motion", level: 78 },
+    { name: "Git & GitHub", level: 88 },
+  ]
+
+export const logs = [
+    "Initializing system scan...",
+    "Fetching core skill data...",
+    "Analyzing efficiency levels...",
+    "Processing AI diagnostics...",
+    "Compiling system performance report...",
+    "Optimization complete. STATUS: STABLE.",
+  ]
+
 
