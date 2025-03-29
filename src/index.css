@@ -81,6 +81,16 @@
       color: #FF0000;
     }
 
+    .cta-btn {
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: 2px solid;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
     .tv-screen {
       position: relative;
       overflow: hidden;

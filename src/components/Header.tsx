@@ -3,27 +3,15 @@ import { Link, NavLink, useLocation } from "react-router"
 import { navigation } from "../constants"
 import CommandInput from "./CommandInput"
 import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { HamburgerMenu } from "./HamburgerMenu"
 import MenuSvg from "../assets/svg/MenuSvg"
 
 
 const Header = () => {
-  const [openNavigation, setOpenNavigation] = useState<boolean>(false)
-  const [isVisible, setIsVisible] = useState<boolean>(true)
   const location = useLocation()
-  let lastScrollY = 0
+  const [openNavigation, setOpenNavigation] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY
-      setIsVisible(scrollY < lastScrollY || scrollY < 50)
-      lastScrollY = scrollY
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
   
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -45,7 +33,7 @@ const Header = () => {
 
   return (
     <header 
-        className={`fixed top-0 left-0 w-full z-50 py-2 bg-[rgba(10,15,29,0.85)] backdrop-blur-md border-b border-color-neonCyan transition-transform duration-500 ease-in-out ${openNavigation ? "bg-color-terminalBlack" : ""} ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-0 left-0 w-full z-50 py-2 ${openNavigation ? "bg-color-terminalBlack" : ""}`}
     >
         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
             <Link
@@ -74,7 +62,7 @@ const Header = () => {
                     onClick={handleClick}
                     className={`block relative text-2xl uppercase transition-colors hover:glitch px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold lg:leading-5 xl:px-12 ${item.url === location.pathname
                       ? "z-2 lg:text-color-neonCyan"
-                      : "lg: text-n-1/50"
+                      : "lg: text-gray-500"
                     } `}
                   >
                     {item.title}
@@ -91,6 +79,11 @@ const Header = () => {
               className="ml-auto neon-border p-1 hover:glitch rounded-lg lg:hidden"
               onClick={toggleNavigation}
             >
+              <div className="flex gap-1 mb-1 ml-[2px]">
+                <span className="w-1 h-1 bg-red-500 rounded-full"></span>
+                <span className="w-1 h-1 bg-yellow-500 rounded-full"></span>
+                <span className="w-1 h-1 bg-green-500 rounded-full"></span>
+              </div>
               <MenuSvg openNavigation={openNavigation} />
             </button>
         </div>

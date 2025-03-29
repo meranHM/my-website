@@ -1,4 +1,6 @@
+import project1Img from "../assets/projects/cyberpunk-portfolio/thumbnail.png"
 
+//Header NavBar
 export const navigation = [
     {
         id: "0",
@@ -22,6 +24,7 @@ export const navigation = [
     }
 ]
 
+// Main Terminal Welcome Messages
 export const welcomeMessage1 = [
     "SYSTEM BOOTING...",
     "CONNECTION ESTABLISHED...",
@@ -73,6 +76,8 @@ export const allWelcomeMessages = [
     welcomeMessage6
 ]
 
+
+// Main Terminal AsciiArt Logo
 export const asciiArt = `
  _______ _______ _______ ______ _______ _______ 
 |   |   |    ___|   |   |   __ \   _   |    |  |
@@ -81,6 +86,7 @@ export const asciiArt = `
                                                 
 `
 
+// Terminal Commands
 export const commands = [
     "help",
     "clear",
@@ -90,9 +96,10 @@ export const commands = [
     "cd contact",
 ]
 
+
+// Skills
 export const skillSet = [
     {
-        id: "0",
         title: "HTML",
         stack: "Frontend",
         category: "Language",
@@ -100,7 +107,6 @@ export const skillSet = [
         color: "text-color-neonOrange",
     },
     {
-        id: "1",
         title: "CSS",
         stack: "Frontend",
         category: "Language",
@@ -108,7 +114,6 @@ export const skillSet = [
         color: "text-color-neonDeepBlue",
     },
     {
-        id: "3",
         title: "Git",
         stack: "Fullstack",
         category: "Tool",
@@ -116,7 +121,6 @@ export const skillSet = [
         color: "text-color-neonRed",
     },
     {
-        id: "2",
         title: "JavaScript",
         stack: "Frontend",
         category: "Language",
@@ -124,7 +128,6 @@ export const skillSet = [
         color: "text-color-neonYellow",
     },
     {
-        id: "4",
         title: "TypeScript",
         stack: "Frontend",
         category: "Language",
@@ -132,7 +135,6 @@ export const skillSet = [
         color: "text-color-neonBlue",
     },
     {
-        id: "5",
         title: "React",
         stack: "Frontend",
         category: "Framework",
@@ -140,7 +142,6 @@ export const skillSet = [
         color: "text-color-neonCyan",
     },
     {
-        id: "6",
         title: "React Router",
         stack: "Frontend",
         category: "Framework",
@@ -149,7 +150,6 @@ export const skillSet = [
     },
 
     {
-        id: "9",
         title: "Next.js",
         stack: "Fullstack",
         category: "Framework",
@@ -157,7 +157,6 @@ export const skillSet = [
         color: "text-color-neonWhite",
     },
     {
-        id: "8",
         title: "Tailwind CSS",
         stack: "Frontend",
         category: "Framework",
@@ -166,14 +165,12 @@ export const skillSet = [
     },
 
     {
-        id: "7",
         title: "SASS",
         stack: "Frontend",
         size: "col-span-1 row-span-1",
         color: "text-color-neonPink",
     },
     {
-        id: "10",
         title: "Framer Motion",
         stack: "Frontend",
         category: "UI/UX",
@@ -181,7 +178,6 @@ export const skillSet = [
         color: "text-color-neonViolet",
     },
     {
-        id: "11",
         title: "GSAP",
         stack: "Frontend",
         category: "UI/UX",
@@ -189,7 +185,6 @@ export const skillSet = [
         color: "text-color-neonGreen",
     },
     {
-        id: "12",
         title: "Vite",
         stack: "Frontend",
         category: "Tool",
@@ -197,7 +192,6 @@ export const skillSet = [
         color: "text-color-neonMagenta",
     },
     {
-        id: "13",
         title: "Webpack",
         stack: "Frontend",
         category: "Tool",
@@ -206,9 +200,124 @@ export const skillSet = [
     },
 ]
 
-export const miniTerminalMessage1 = `SYSTEM ONLINE...  
+
+// Mini Terminal Messages
+export const miniTerminalMessageHero = `SYSTEM ONLINE...  
 WELCOME TO THE CYBER GRID`
 
-export const miniTerminalMessage2 = `CORE SYSTEMS INITIALIZED...
+export const miniTerminalMessageSkills = `CORE SYSTEMS INITIALIZED...
 STATUS: ONLINE`
+
+export const miniTerminalMessageProjects = `ACCESS GRANTED TO THE MAINFRAME...
+DATA STREAM: ACTIVED`
+
+export const miniTerminalMessageCTA = `CONNECTION REQUEST DETECTED...  
+ESTABLISHING SECURE LINK...  
+STATUS: CONNECTION STABLE  
+AWAITING USER INPUT...`  
+
+
+
+// Projects
+export const projects = [
+    {
+        id: 1,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: "/images/cyberpunk-portfolio.png"
+    },
+    {
+        id: 2,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+    {
+        id: 3,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+    {
+        id: 4,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+    {
+        id: 5,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+    {
+        id: 6,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+    {
+        id: 7,
+        title: "Cyberpunk Portfolio",
+        description: "A futuristic portfolio website with a hacker aesthetic.",
+        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        thumbnail: project1Img,
+        liveDemo: "https://example.com",
+        repo: "https://github.com/meranHM/my-website",
+        featured: true,
+        date: "2025-03-28",
+        status: "In Progress",
+        tag: "Portfolio",
+        video: project1Img
+    },
+]
+
 

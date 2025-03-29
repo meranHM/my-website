@@ -125,7 +125,7 @@ const MainTerminal = () => {
             <div className="w-12"/>
         </div>
     <div 
-        className="p-4 h-96 overflow-y-auto terminal-glow"
+        className="p-4 h-[500px] overflow-y-auto terminal-glow"
         ref={outputRef}
         id="terminal-message"
     >
