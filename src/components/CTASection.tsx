@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const CTASection = () => {
   return (
     <motion.section
-        className="relative flex flex-col items-center text-center p-8 mt-4"
+        className="relative flex flex-col items-center text-center p-8 mt-4 z-50"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -26,8 +26,16 @@ const CTASection = () => {
             >
                 <motion.a
                     href="/contact"
-                    className="cta-btn border-color-neonGreen text-color-neonGreen hover:bg-color-neonGreen/20"
-                    whileHover={{ scale: 1.1 }}
+                    className="cta-btn border-color-neonPink text-color-neonPink hover:bg-color-neonPink/20 cursor-pointer z-50"
+                    whileHover={{ scale: 1.05 }}
+                >
+                🚀 Hire Me
+                </motion.a>
+
+                <motion.a
+                    href="/projects"
+                    className="cta-btn border-color-neonGreen text-color-neonGreen hover:bg-color-neonGreen/20 cursor-pointer z-50"
+                    whileHover={{ scale: 1.05 }}
                 >
                     🔥 Check My Work
                 </motion.a>
@@ -35,8 +43,8 @@ const CTASection = () => {
                 <motion.a
                     href="/resume.pdf"
                     download
-                    className="cta-btn border-color-neonBlue hover:bg-color-neonBlue/20"
-                    whileHover={{ scale: 1.1 }}
+                    className="cta-btn border-color-neonBlue hover:bg-color-neonBlue/20 cursor-pointer z-50"
+                    whileHover={{ scale: 1.05 }}
                 >
                     📄 Download My Resume
                 </motion.a>

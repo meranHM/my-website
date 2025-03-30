@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { diagnosticSkills, logs } from "../constants"
+import { skillSet, logs } from "../constants"
 
 
-const SystemDiagnostic = () => {
+const SkillSet = () => {
     const [logIndex, setLogIndex] = useState<number>(0)
     const [scanComplete, setScanCompelete] = useState<boolean>(false)
 
     useEffect( () => {
         if (logIndex < logs.length - 1) {
-            setTimeout(() => setLogIndex(logIndex + 1), 1000)
+            setTimeout(() => setLogIndex(logIndex + 1), 700)
         } else {
-            setTimeout(() => setScanCompelete(true), 1200)
+            setTimeout(() => setScanCompelete(true), 1000)
         }
     }, [logIndex])
 
@@ -37,7 +37,7 @@ const SystemDiagnostic = () => {
         <div
             className="mt-4 space-y-2"
         >
-            {diagnosticSkills.map((skill, index) => (
+            {skillSet.map((skill, index) => (
                 <div
                     key={index}
                     className="w-full"
@@ -67,4 +67,4 @@ const SystemDiagnostic = () => {
   )
 }
 
-export default SystemDiagnostic
+export default SkillSet

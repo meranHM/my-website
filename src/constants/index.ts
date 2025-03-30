@@ -98,7 +98,7 @@ export const commands = [
 
 
 // Skills
-export const skillSet = [
+export const skills = [
     {
         title: "HTML",
         stack: "Frontend",
@@ -321,7 +321,7 @@ export const projects = [
 ]
 
 // System Diagnostic Content
-export const diagnosticSkills = [
+export const skillSet = [
     { name: "JavaScript", level: 92 },
     { name: "React", level: 89 },
     { name: "Next.js", level: 85 },
