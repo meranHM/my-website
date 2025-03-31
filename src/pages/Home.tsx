@@ -10,12 +10,13 @@ import ProjectsSection from "../components/ProjectsSection"
 import CTASection from "../components/CTASection"
 import SkillSet from "../components/SkillSet"
 import BlogSection from "../components/BlogSection"
-/* import Skills from "../components/Skills" */
+import { MovingBackground } from "../components/MovingBackground"
+import { useRef } from "react"
 
 
 
 const Home = () => {
-
+  const parallaxRef = useRef<HTMLElement>(null)
   
   return (
     <section className="relative">
@@ -49,6 +50,9 @@ const Home = () => {
         className="mb-4"
       />
       <BlogSection />
+      <MovingBackground 
+        parallaxRef={parallaxRef}
+      />
     </section>
   )
 }
