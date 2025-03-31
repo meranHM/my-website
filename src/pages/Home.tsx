@@ -8,7 +8,7 @@ import MiniTerminal from "../components/MiniTerminal"
 import Hero from "../components/Hero"
 import ProjectsSection from "../components/ProjectsSection"
 import CTASection from "../components/CTASection"
-import SkillSet from "../components/SkillSet"
+import Skills from "../components/Skills"
 import BlogSection from "../components/BlogSection"
 /* import Skills from "../components/Skills" */
 
@@ -30,7 +30,7 @@ const Home = () => {
         anchor="#skills"
         className="mt-36 mb-10 lg:mt-72 "
       />
-      <SkillSet />
+      <Skills />
       <MiniTerminal 
         message={miniTerminalMessageProjects}
         anchor="#projects"
