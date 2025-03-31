@@ -1,8 +1,10 @@
-
+import SystemProfile from "../components/SystemProfile"
 
 const About = () => {
   return (
-    <div>About</div>
+    <section className="relative">
+      <SystemProfile />
+    </section>
   )
 }
 

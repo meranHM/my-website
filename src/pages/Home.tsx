@@ -49,7 +49,6 @@ const Home = () => {
         className="mb-4"
       />
       <BlogSection />
-
     </section>
   )
 }

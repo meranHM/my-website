@@ -1,9 +1,11 @@
+import reactHooks from "../assets/blogs/blog-post.png"
+
 export const blogPosts = [
     {
       id: 1,
       title: "Mastering React Hooks",
       excerpt: "A deep dive into useState, useEffect, and custom hooks...",
-      image: "/images/react-hooks.jpg",
+      image: reactHooks,
       url: "/blog/react-hooks",
     },
     {

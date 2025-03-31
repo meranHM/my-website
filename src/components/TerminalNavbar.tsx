@@ -23,7 +23,7 @@ const TerminalNavbar = () => {
     ))
 
   return (
-        <nav className="flex flex-col scanline px-10 py-3 gap-3 mt-1">
+        <nav className="flex flex-col scanline px-10 py-3 gap-3 mt-1 text-md md:text-lg font-bold">
             {navbarEls}
         </nav>
   )
