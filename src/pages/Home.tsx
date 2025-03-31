@@ -2,12 +2,15 @@ import {
   miniTerminalMessageHero, 
   miniTerminalMessageSkills, 
   miniTerminalMessageProjects,
-  miniTerminalMessageCTA } from "../constants"
+  miniTerminalMessageCTA,
+  miniTerminalMessageBlog } from "../constants"
 import MiniTerminal from "../components/MiniTerminal"
 import Hero from "../components/Hero"
 import ProjectsSection from "../components/ProjectsSection"
 import CTASection from "../components/CTASection"
 import SkillSet from "../components/SkillSet"
+import BlogSection from "../components/BlogSection"
+/* import Skills from "../components/Skills" */
 
 
 
@@ -25,7 +28,7 @@ const Home = () => {
       <MiniTerminal 
         message={miniTerminalMessageSkills}
         anchor="#skills"
-        className="mt-36 mb-4 lg:mt-72 "
+        className="mt-36 mb-10 lg:mt-72 "
       />
       <SkillSet />
       <MiniTerminal 
@@ -40,6 +43,12 @@ const Home = () => {
         className="mt-36"
       />
       <CTASection />
+      <MiniTerminal 
+        message={miniTerminalMessageBlog}
+        anchor="#logs"
+        className="mb-4"
+      />
+      <BlogSection />
 
     </section>
   )

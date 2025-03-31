@@ -10,8 +10,8 @@ const MiniTerminal: React.FC<MiniTerminalProps> = ({message, anchor, className})
       <div
         className="flex items-center justify-between px-3 py-2 bg-color-terminalHeader border-b border-color-neonGreen rounded-t-lg mt-10"
       >
-          <span className="text-xs text-color-neonGreen tracking-widest">
-            root@cyber-portfolio:{anchor}
+          <span className="text-xs lg:text-sm text-color-neonGreen tracking-widest">
+            root@cyber-portfolio: {anchor}
           </span>
       </div>
       <div 

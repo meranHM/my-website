@@ -216,6 +216,11 @@ ESTABLISHING SECURE LINK...
 STATUS: CONNECTION STABLE  
 AWAITING USER INPUT...`  
 
+export const miniTerminalMessageBlog = `DATA NODES LOCATED...
+DECODING LATEST LOG ENTRIES...  
+ACCESSING KNOWLEDGE ARCHIVE...`
+
+
 
 
 // Projects
@@ -322,13 +327,13 @@ export const projects = [
 
 // System Diagnostic Content
 export const skillSet = [
-    { name: "JavaScript", level: 92 },
-    { name: "React", level: 89 },
-    { name: "Next.js", level: 85 },
-    { name: "TypeScript", level: 80 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "Framer Motion", level: 78 },
-    { name: "Git & GitHub", level: 88 },
+    { name: "JavaScript", level: 92, color: "bg-color-neonYellow/60" },
+    { name: "React", level: 89, color: "bg-color-neonCyan/60" },
+    { name: "Next.js", level: 85, color: "bg-color-neonWhite/60" },
+    { name: "TypeScript", level: 80, color: "bg-color-neonBlue/60" },
+    { name: "Tailwind CSS", level: 90, color: "bg-color-neonTeal/60" },
+    { name: "Framer Motion", level: 78, color: "bg-color-neonViolet/60" },
+    { name: "Git & GitHub", level: 88, color: "bg-color-neonRed/60" },
   ]
 
 export const logs = [

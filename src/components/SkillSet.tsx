@@ -9,12 +9,12 @@ const SkillSet = () => {
 
     useEffect( () => {
         if (logIndex < logs.length - 1) {
-            setTimeout(() => setLogIndex(logIndex + 1), 700)
+            setTimeout(() => setLogIndex(logIndex + 1), 300)
         } else {
-            setTimeout(() => setScanCompelete(true), 1000)
+            setTimeout(() => setScanCompelete(true), 700)
         }
     }, [logIndex])
-
+    
   return (
     <div 
         className="relative p-6 border-2 border-color-neonGreen bg-black/80 rounded-lg shadow-color-neonGreen"
@@ -43,12 +43,12 @@ const SkillSet = () => {
                     className="w-full"
                 >
                     <p
-                        className="text-xs md:text-sm text-color-neonGreen font-bold mb-1"
+                        className="text-sm md:text-xl text-color-neonGreen font-bold mb-1"
                     >
                         {skill.name}
                     </p>
                     <motion.div
-                        className="h-2 bg-color-neonGreen/20 rounded"
+                        className={`h-4 ${skill.color} rounded`}
                         initial={{ width: 0 }}
                         animate={{ width: scanComplete ? `${skill.level}%` : 0 }}
                         transition={{ duration: 1.5, delay: index * 0.3 }}
