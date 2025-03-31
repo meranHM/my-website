@@ -18,10 +18,11 @@ const Landing = () => {
           >
               <MainTerminal />
           </div>
-      </section>
-      <MovingBackground 
+          <MovingBackground 
         parallaxRef={parallaxRef}
       />
+      </section>
+
     </>
   )
 }

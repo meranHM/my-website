@@ -131,7 +131,7 @@ const MainTerminal = () => {
     >
         <GlitchEffect 
             id="pre"
-            className="text-center scanline text-xs md:text-lg"
+            className="text-center scanline text-[0.6rem] md:text-lg"
         >
           {asciiArt}
         </GlitchEffect>
