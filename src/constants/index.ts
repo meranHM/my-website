@@ -100,104 +100,25 @@ export const commands = [
 // Skills
 export const skills = [
     {
-        title: "HTML",
-        stack: "Frontend",
-        category: "Language",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonOrange",
+        category: "Frontend",
+        items: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        status: "STABLE",
     },
     {
-        title: "CSS",
-        stack: "Frontend",
-        category: "Language",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonDeepBlue",
+        category: "Animations",
+        items: ["Framer Motion", "GSAP", "CSS Animations"],
+        status: "OPTIMIZING",
     },
     {
-        title: "Git",
-        stack: "Fullstack",
-        category: "Tool",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonRed",
+        category: "Tools & Workflow",
+        items: ["Git", "VS Code", "Figma", "Vite"],
+        status: "STABLE",
     },
     {
-        title: "JavaScript",
-        stack: "Frontend",
-        category: "Language",
-        size: "col-span-2 row-span-1",
-        color: "text-color-neonYellow",
-    },
-    {
-        title: "TypeScript",
-        stack: "Frontend",
-        category: "Language",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonBlue",
-    },
-    {
-        title: "React",
-        stack: "Frontend",
-        category: "Framework",
-        size: "col-span-2 row-span-1",
-        color: "text-color-neonCyan",
-    },
-    {
-        title: "React Router",
-        stack: "Frontend",
-        category: "Framework",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonWhite",
-    },
-
-    {
-        title: "Next.js",
-        stack: "Fullstack",
-        category: "Framework",
-        size: "col-span-3 row-span-1",
-        color: "text-color-neonWhite",
-    },
-    {
-        title: "Tailwind CSS",
-        stack: "Frontend",
-        category: "Framework",
-        size: "col-span-2 row-span-1",
-        color: "text-color-neonTeal",
-    },
-
-    {
-        title: "SASS",
-        stack: "Frontend",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonPink",
-    },
-    {
-        title: "Framer Motion",
-        stack: "Frontend",
-        category: "UI/UX",
-        size: "col-span-2 row-span-1",
-        color: "text-color-neonViolet",
-    },
-    {
-        title: "GSAP",
-        stack: "Frontend",
-        category: "UI/UX",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonGreen",
-    },
-    {
-        title: "Vite",
-        stack: "Frontend",
-        category: "Tool",
-        size: "col-span-2 row-span-1",
-        color: "text-color-neonMagenta",
-    },
-    {
-        title: "Webpack",
-        stack: "Frontend",
-        category: "Tool",
-        size: "col-span-1 row-span-1",
-        color: "text-color-neonDeepBlue",
-    },
+        category: "Upcoming Learning",
+        items: ["Node.js", "Express.js", "MongoDB", "Prisma"],
+        status: "Locked",
+    }
 ]
 
 

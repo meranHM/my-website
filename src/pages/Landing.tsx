@@ -19,8 +19,8 @@ const Landing = () => {
               <MainTerminal />
           </div>
           <MovingBackground 
-        parallaxRef={parallaxRef}
-      />
+            parallaxRef={parallaxRef}
+          />
       </section>
 
     </>
