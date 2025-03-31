@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router"
 import { navigation } from "../constants"
 import CommandInput from "./CommandInput"
 import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll"
-import { useState } from "react"
+import { /* useEffect, */ useState } from "react"
 import { HamburgerMenu } from "./HamburgerMenu"
 import MenuSvg from "../assets/svg/MenuSvg"
 
@@ -11,7 +11,19 @@ import MenuSvg from "../assets/svg/MenuSvg"
 const Header = () => {
   const location = useLocation()
   const [openNavigation, setOpenNavigation] = useState(false)
+  /* const [isVisible, setIsvisible] = useState<boolean>(true)
+  let lastScrollY = 0
 
+  useEffect( () => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      setIsvisible(scrollY < lastScrollY || scrollY < 50)
+      lastScrollY = scrollY
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => removeEventListener("scroll", handleScroll)
+  },[]) */
   
   const toggleNavigation = () => {
     if (openNavigation) {
