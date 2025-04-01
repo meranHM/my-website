@@ -7,13 +7,13 @@ const Contact = () => {
   const [command, setCommand] = useState("")
   const [easterEgg, setEasterEgg] = useState(false)
 
-  const handleSendMessage = (e) => {
+  const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setMessageSent(true)
     setTimeout(() => setMessageSent(false), 3000)
   }
 
-  const handleTerminalCommand = (e) => {
+  const handleTerminalCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && command.toLocaleLowerCase() === "contact-me") {
       setEasterEgg(true)
     }
