@@ -52,8 +52,6 @@
       animation: flicker 1.5s infinite alternate;
     }
 
-
-
     .skill-name {
       color: currentColor;
       text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;

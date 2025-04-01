@@ -48,7 +48,7 @@ const MainTerminal = () => {
             break
         
         default:
-            newHistory.push("Unkown command. Type 'help' for a list of commands.")    
+            newHistory.push("Unknown command. Type 'help' for a list of commands.")    
     }
 
     setCommandHistory(newHistory)
@@ -97,13 +97,13 @@ const MainTerminal = () => {
   useEffect(() => {
       if (index < messages.length) {
       const timer = setTimeout(() => {
-          setCurrentMessage((prev) => prev + "\n" + messages[index])
-          setIndex(index + 1);
+          setCurrentMessage((prev) => `${prev}\n${messages[index]}`)
+          setIndex(i => i + 1);
       }, 800);
 
       return () => clearTimeout(timer);
       }
-  }, [index]);
+  }, [index, messages]);
 
 
 
@@ -125,7 +125,7 @@ const MainTerminal = () => {
             <div className="w-12"/>
         </div>
     <div 
-        className="p-4 h-[400px] md:h-[500px] overflow-y-auto terminal-glow"
+        className="p-4 max-h-[80vh] min-h-[300px] overflow-y-auto terminal-glow"
         ref={outputRef}
         id="terminal-message"
     >

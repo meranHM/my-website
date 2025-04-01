@@ -1,9 +1,10 @@
 import { navigation } from "../constants"
 import { Link } from "react-router"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const TerminalNavbar = () => {
     const firstLinkRef = useRef<HTMLAnchorElement>(null)
+    const [focusedLink, setFocusedLink] = useState(0)
 
     useEffect(() => {
         if (firstLinkRef.current) {
@@ -15,15 +16,18 @@ const TerminalNavbar = () => {
         <Link
             key={item.id}
             to={item.url}
-            className="terminal-link text-color-neonPurple  z-5 before:content-['➤'] before:z-5   before:absolute before:left-[-30px] before:opacity-0 hover:before:opacity-100 focus:before:opacity-100 focus:outline-none before:transition before:duration-100 before:ease-in-out"
             ref={index === 0 ? firstLinkRef : null}
+            className={`terminal-link z-[999] text-color-neonPurple relative before:content-['➤'] before:absolute before:left-[-30px] before:opacity-0 transition duration-100 ease-in-out focus:outline-none
+                ${focusedLink === index ? "before:opacity-100" : ""}`}
+                onFocus={() => setFocusedLink(index)}
+                onMouseEnter={() => setFocusedLink(index)}
         >
             {item.title}
         </Link>
     ))
 
   return (
-        <nav className="flex flex-col scanline px-10 py-3 gap-3 mt-1 text-md md:text-lg font-bold">
+        <nav className="flex flex-col scanline px-10 py-3 gap-3 mt-1 text-md md:text-lg font-bold z-[999]">
             {navbarEls}
         </nav>
   )
