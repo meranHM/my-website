@@ -14,16 +14,18 @@ const App = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <GlitchTransition key={location.pathname}/>
-      <Routes>
+      <>
+      <GlitchTransition key={location.pathname} />
+      <Routes location={location}>
         <Route path="/" element={<Landing />}/>
-        <Route path="home" element={<MainLayout />}>
-          <Route index element={<Home />}/>
-          <Route path="projects" element={<Projects />}/>
-          <Route path="about" element={<About />}/>
-          <Route path="contact" element={<Contact />}/>
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<Home />}/>
+          <Route path="/projects" element={<Projects />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
         </Route>
       </Routes>
+      </>
     </AnimatePresence>
   )
 }

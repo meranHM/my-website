@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <section className="relative">
       <FadeInSection
-        className="pb-20 pt-10 mb-28"
+        className="pb-20 mb-28"
       >
         <MiniTerminal 
           message={miniTerminalMessageHero}

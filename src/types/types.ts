@@ -31,3 +31,7 @@ export interface FadeInSectionProps {
   children: ReactNode
   className?: string
 }
+
+export interface GlitchTransitionProps {
+  children: ReactNode
+}
