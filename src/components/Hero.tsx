@@ -11,7 +11,7 @@ const Hero = () => {
       >
         <div className="tv-noise"></div>
         <h1
-          className="text-balance text-md px-10 md:p-20 md:text-xl lg:text-3xl text-color-neonCyan text-center text-shadow animate-tvGlitch leading-10 md:leading-loose lg:leading-loose tracking-wider"
+          className="text-balance text-lg px-10 md:p-20 md:text-xl lg:text-3xl text-color-neonCyan text-center text-shadow animate-tvGlitch leading-10 md:leading-loose lg:leading-loose tracking-wider"
         >
           I'm Mehran Shahani, a <span className="text-nowrap">front-end</span> developer passionate about crafting futuristic digital experiences.
         </h1>
