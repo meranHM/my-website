@@ -9,7 +9,7 @@ const BlogSection = () => {
 
   return (
     <section
-        className="relative py-16 z-[500]"
+        className="relative z-[500]"
     >
         <h2
             className="text-3xl font-bold text-glow text-center mb-6"

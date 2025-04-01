@@ -31,11 +31,11 @@ const SystemProfile = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2 }}
         >
-            <p><span className="text-color-neonCyan">🔍 User Identified:</span> Mehran Shahani</p>
-            <p><span className="text-color-neonCyan">🛠️ Role:</span> Frontend Developer ( React, Next.js, TypeScript )</p>
-            <p><span className="text-color-neonCyan">📍 Location:</span> Iran ( Open to Remote & Relocation )</p>
-            <p><span className="text-color-neonCyan">⚡ Status:</span> Active | Accepting Opportunities</p>
-            <p><span className="text-color-neonCyan">🎯 Objective:</span> Crafting futuristic, high-performance web experiences</p>
+            <p><span className="text-color-neonCyan font-bold">🔍 User Identified:</span> Mehran Shahani</p>
+            <p><span className="text-color-neonCyan font-bold">🛠️ Role:</span> Frontend Developer ( React, Next.js, TypeScript )</p>
+            <p><span className="text-color-neonCyan font-bold">📍 Location:</span> Iran ( Open to Remote & Relocation )</p>
+            <p><span className="text-color-neonCyan font-bold">⚡ Status:</span> Active | Accepting Opportunities</p>
+            <p><span className="text-color-neonCyan font-bold">🎯 Objective:</span> Crafting futuristic, high-performance web experiences</p>
         </motion.div>
     </motion.section>
   )

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 const CTASection = () => {
   return (
     <motion.section
-        className="relative flex flex-col items-center text-center p-8 mt-4 z-50"
+        className="relative flex flex-col items-center text-center z-50"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}

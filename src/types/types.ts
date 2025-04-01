@@ -26,3 +26,8 @@ export interface MiniTerminalProps {
   anchor: string
   className?: string
 }
+
+export interface FadeInSectionProps {
+  children: ReactNode
+  className?: string
+}

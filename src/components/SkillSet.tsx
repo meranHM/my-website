@@ -1,23 +1,29 @@
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { useState, useEffect, useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import { skillSet, logs } from "../constants"
 
 
 const SkillSet = () => {
     const [logIndex, setLogIndex] = useState<number>(0)
     const [scanComplete, setScanCompelete] = useState<boolean>(false)
+    
+    const containerRef = useRef(null)
+    const isInview = useInView(containerRef, { once: true, margin: "-100px" })
 
     useEffect( () => {
-        if (logIndex < logs.length - 1) {
-            setTimeout(() => setLogIndex(logIndex + 1), 300)
-        } else {
-            setTimeout(() => setScanCompelete(true), 700)
+        if (isInview) {
+            if (logIndex < logs.length - 1) {
+                setTimeout(() => setLogIndex(logIndex + 1), 300)
+            } else {
+                setTimeout(() => setScanCompelete(true), 700)
+            }
         }
-    }, [logIndex])
+    }, [logIndex, isInview])
     
   return (
     <div 
         className="relative p-6 border-2 border-color-neonGreen bg-black/80 rounded-lg shadow-color-neonGreen"
+        ref={containerRef}
     >
         <div
             className="overflow-hidden h-5 relative"
@@ -29,9 +35,9 @@ const SkillSet = () => {
             />
         </div>
         <pre 
-            className="text-color-neonGreen text-sm md:text-lg tracking-widest font-mono mt-2"
+            className="text-color-neonGreen text-xs md:text-lg tracking-widest font-mono mt-2 overflow-hidden"
         >
-            {logs[logIndex]}
+            {isInview ? logs[logIndex] : ""}
         </pre>
 
         <div
@@ -56,7 +62,7 @@ const SkillSet = () => {
                 </div>
             ))}
         </div>
-        {scanComplete && (
+        {scanComplete && isInview && (
             <p
                 className="text-color-neonGreen text-center mt-4 text-lg font-bold"
             >

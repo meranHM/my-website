@@ -141,7 +141,8 @@ export const miniTerminalMessageBlog = `DATA NODES LOCATED...
 DECODING LATEST LOG ENTRIES...  
 ACCESSING KNOWLEDGE ARCHIVE...`
 
-
+export const miniTerminalMessageXP = `ACCESSING PERSONAL CORE DIRECTIVE...  
+LOG ENTRY INITIATED..`
 
 
 // Projects
@@ -265,5 +266,15 @@ export const logs = [
     "Compiling system performance report...",
     "Optimization complete. STATUS: STABLE.",
   ]
+
+
+// My Developer Timeline
+export const timelineData = [
+  { year: "2013-2015", title: "Early Interests", description: "Fascinated by tech, explored coding basics and digital design.", future: false },
+  { year: "2022", title: "Frontend Foundations", description: "Started learning HTML, CSS, and JavaScript. Built first simple projects.", future: false },
+  { year: "2023-2024", title: "React & Advanced Tech", description: "Mastered React, Redux, TypeScript, and Tailwind CSS. Created real projects.", future: false },
+  { year: "2025", title: "Current Status", description: "Building a strong portfolio, selling templates, and seeking opportunities.", future: false },
+  { year: "Future", title: "Next Mission: Backend Mastery", description: "Planning to learn Next.js, databases, and full-stack development.", future: true }
+]  
 
 

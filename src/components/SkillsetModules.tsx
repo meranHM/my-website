@@ -4,8 +4,8 @@ import SkillCard from "./SkillCard"
 
 const SkillsetModules = () => {
   return (
-    <div className="mt-20 z-[999]">
-        <h2 className="text-2xl text-color-neonGreen mb-8">💾 Skillset Modules</h2>
+    <div className="z-[999] ">
+        <h2 className="text-2xl md:text-3xl font-bold text-color-neonGreen mb-6 text-center">💾 Skillset Modules</h2>
         <div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4"
         >
