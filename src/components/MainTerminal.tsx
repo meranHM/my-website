@@ -16,6 +16,7 @@ const MainTerminal = () => {
   const [userInput, setUserInput] = useState<string>("") 
   const navigate = useNavigate()
   const outputRef = useRef<HTMLDivElement>(null)
+  const hasStartedTyping = useRef(false)
   const [randomIndex] = useState<number>(Math.floor(Math.random() * allWelcomeMessages.length))
   const messages:string[] = allWelcomeMessages[randomIndex]
 
@@ -81,7 +82,7 @@ const MainTerminal = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
         setShowComponent(true)
-    },3200)
+    },2000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -94,16 +95,35 @@ const MainTerminal = () => {
   }, [commandHistory, showComponent])
 
   //Adding the typewriter effect for the welcome message
-  useEffect(() => {
-      if (index < messages.length) {
-      const timer = setTimeout(() => {
-          setCurrentMessage((prev) => `${prev}\n${messages[index]}`)
-          setIndex(i => i + 1);
-      }, 800);
 
-      return () => clearTimeout(timer);
-      }
-  }, [index, messages]);
+
+  useEffect(() => {
+    if (hasStartedTyping.current) return;
+    hasStartedTyping.current = true
+
+    if (index < messages.length) {
+        let charIndex = 0
+        const sentence = messages[index]
+
+
+
+        const typewriter = () => {
+            if (charIndex < sentence.length - 1) {
+                setCurrentMessage((prev) => prev + sentence[charIndex])
+                charIndex++
+                setTimeout(typewriter, 5)
+            } else {
+                setTimeout(() => {
+                    setCurrentMessage((prev) => prev + "\n")
+                    setIndex((i) => i + 1)
+                    hasStartedTyping.current = false
+                }, 200)
+            }
+        }
+
+        typewriter()
+    }
+  }, [index, messages])
 
 
 
@@ -162,3 +182,15 @@ const MainTerminal = () => {
 }
 
 export default MainTerminal
+
+
+ /*  useEffect(() => {
+      if (index < messages.length) {
+      const timer = setTimeout(() => {
+          setCurrentMessage((prev) => `${prev}\n${messages[index]}`)
+          setIndex(i => i + 1);
+      }, 800);
+
+      return () => clearTimeout(timer);
+      }
+  }, [index, messages]); */
