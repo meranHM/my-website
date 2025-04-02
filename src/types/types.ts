@@ -44,7 +44,6 @@ export interface ProjectCategory {
     liveDemo: string
     repo: string
     video: string
-    category: string
 }
 
 export interface CategorySectionProps {

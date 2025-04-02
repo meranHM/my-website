@@ -89,7 +89,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: "/images/cyberpunk-portfolio.png",
-            category: "Portfolio"
         },
     ],
     saas: [
@@ -101,7 +100,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "SaaS"
         },
     ],
     ecommerce: [
@@ -113,7 +111,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "ecommerce"
         },
     ],
     dashboards: [
@@ -125,7 +122,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "Dashboard"
         },
     ],
     webapps: [
@@ -137,7 +133,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "WebApp"
         },
     ],
     landings: [
@@ -149,7 +144,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "Landing Page"
         },
     ],
     fun: [
@@ -161,7 +155,6 @@ export const projectsObj = {
             liveDemo: "https://example.com",
             repo: "https://github.com/meranHM/my-website",
             video: project1Img,
-            category: "Fun & Experimental"
         },
     ],
 }
