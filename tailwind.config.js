@@ -74,6 +74,7 @@ export default {
       animation: {
         starEffect: "starEffect 10s infinite ease-in-out forwards",
         tvGlitch: "vhsStyle 1.5s infinite steps(5), signalLoss 10s infinite",
+        fadeIn: "fadeIn 1.5s ease-in-out infinite",
       },
       keyframes: {
         starEffect: {
@@ -96,7 +97,10 @@ export default {
           "99%": { opacity: "0.8", filter: "blur(0.5px)" },
           "100%": { opacity: "1", filter: "none" },
         },
-
+        fadeIn: {
+          "0%, 100%" : { opacity: 0 },
+          "50": { opacity: 1 },
+        }
       },
     },
   },

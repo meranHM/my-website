@@ -1,26 +1,45 @@
 import { motion } from "framer-motion"
+import { useMemo } from "react"
 
-const MatrixRain = () => {
-    const chars = "01A3B4CDEFGH56789!@#$%^&*"
+const matrixChars = "01A3B4CDEFGH56789!@#$%^&*"
+
+const getRandomStyles = () =>  ({
+    fontSize: `${Math.floor(Math.random() * 16) + 6}px`,
+    opacity: Math.random() * 0.2 + 0.4,
+    textShadow: Math.random() > 0.5 ? "0px 0px 6px rgba(0, 255, 0, 0.5)" : "none",
+})
+
+const MatrixColumn = () => {
+    const randDuration = useMemo(() => Math.floor(Math.random() * 4) + 7, [] )
+    const matrixData = useMemo(() =>
+            Array.from({ length: 30 }).map( _ => ({
+                char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
+                style: getRandomStyles(),
+                animationClass: "animate-fadeIn"
+            }))
+        ,[])
 
   return (
     <motion.div
-        className="overflow-hidden text-green-400 text-lg font-mono tracking-wide"
-        initial={{  y: "-100%"}}
-        animate={{ y: "100%" }}
-        transition={{
-            repeat: Infinity,
-            duration: 3,
-            ease: "linear",
-        }}
+      className="overflow-hidden text-green-400 text-lg font-mono tracking-wide flex flex-col"
+      initial={{ y: "-100%" }}
+      animate={{ y: "100%" }}
+      transition={{
+        repeat: Infinity,
+        duration: randDuration,
+        ease: "linear",
+      }}
     >
-        {Array.from({ length: 30 }).map((_, i) => (
-            <div key={i} className="opacity-50 animate-fadeIn">
-                {chars[Math.floor(Math.random() * chars.length)]}
-            </div>
+        {matrixData.map((data, index) => (
+            <span
+                key={index}
+                style={data.style}
+            >
+                {data.char}
+            </span>
         ))}
     </motion.div>
-  )
-}
+  );
+};
 
-export default MatrixRain
+export default MatrixColumn;

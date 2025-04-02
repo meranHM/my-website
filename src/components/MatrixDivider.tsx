@@ -12,11 +12,10 @@ const getRandomStyles = () =>  ({
 
 
 const MatrixDivider = () => {
+    const randDuration = useMemo(() => Math.floor(Math.random() * 4) + 7, [] )
 
-const RandDuration = useMemo(() => Math.floor(Math.random() * 4) + 7, [] )
-
-const matrixData = useMemo(() =>
-        Array.from({ length: 50 }).map(() => ({
+    const matrixData = useMemo(() =>
+        Array.from({ length: 50 }).map( _ => ({
             char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
             style: getRandomStyles(),
         }))
@@ -27,7 +26,7 @@ const matrixData = useMemo(() =>
         className="w-full py-10 overflow-hidden text-color-neonGreen text-sm font-mono tracking-wide flex space-x-2 whitespace-nowrap"
         initial={{ x: "100%" }}
         animate={{ x: "-100%" }}
-        transition={{ repeat: Infinity, duration: RandDuration, ease: "linear" }}
+        transition={{ repeat: Infinity, duration: randDuration, ease: "linear" }}
     >
         {matrixData.map((data, index) => (
             <span
