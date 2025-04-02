@@ -1,4 +1,3 @@
-
 import { CategorySectionProps } from "../types/types"
 import MatrixDivider from "./MatrixDivider"
 import ProjectCarousel from "./ProjectCarousel"
