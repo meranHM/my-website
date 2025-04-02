@@ -6,7 +6,7 @@ import Footer from "../Footer"
 const MainLayout = () => {
   return (
     <div
-      className="relative pt-[1.75rem] lg:pt-[2.25rem] overflow-hidden font-orbit"
+      className="relative pt-[1.75rem] lg:pt-[2.25rem] overflow-hidden font-orbit z-50"
     >
         <Header />
             <main

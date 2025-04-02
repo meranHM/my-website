@@ -1,8 +1,15 @@
+import CategorySection from "../components/CategorySection"
+import { projectsObj } from "../constants/projects"
 
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+      <CategorySection 
+        title={"Portfolio"} 
+        projects={projectsObj.portfolio}
+      />
+    </>
   )
 }
 

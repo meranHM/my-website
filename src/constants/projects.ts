@@ -3,7 +3,6 @@ import project1Img from "../assets/projects/cyberpunk-portfolio/thumbnail.png"
 // Projects
 export const projects = [
     {
-        id: 1,
         title: "Cyberpunk Portfolio",
         description: "A futuristic portfolio website with a hacker aesthetic.",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
@@ -11,93 +10,158 @@ export const projects = [
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
         tag: "Portfolio",
-        video: "/images/cyberpunk-portfolio.png"
+        video: "/images/cyberpunk-portfolio.png",
+        category: "Portfolio"
     },
     {
-        id: 2,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
+        title: "SaaS Dashboard",
+        description: "A neatly design SaaS dashboard",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
         thumbnail: project1Img,
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
+        tag: "saas",
+        video: project1Img,
+        category: "SaaS"
     },
     {
-        id: 3,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
+        title: "Vanta Boutique",
+        description: "A classy and modern E-commerce website",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
         thumbnail: project1Img,
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
+        tag: "ecommerce",
+        video: project1Img,
+        category: "Ecommerce"
     },
     {
-        id: 4,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
+        title: "Admin Panel",
+        description: "A modern and clean admin panel",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
         thumbnail: project1Img,
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
+        tag: "dashboards",
+        video: project1Img,
+        category: "Dashboards"
     },
     {
-        id: 5,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
+        title: "Task Management App",
+        description: "A handy and interactive to-do list App",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
         thumbnail: project1Img,
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
+        tag: "webapp",
+        video: project1Img,
+        category: "WebApps"
     },
     {
-        id: 6,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
+        title: "Landing Page",
+        description: "A unique and elegant landing page",
         techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
         thumbnail: project1Img,
         liveDemo: "https://example.com",
         repo: "https://github.com/meranHM/my-website",
         featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 7,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
+        tag: "landing",
+        video: project1Img,
+        category: "Landing Page"
     },
 ]
+
+
+
+
+export const projectsObj = {
+    portfolio: [
+        {
+            title: "Cyberpunk Portfolio",
+            description: "A futuristic portfolio website with a hacker aesthetic.",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: "/images/cyberpunk-portfolio.png",
+            category: "Portfolio"
+        },
+    ],
+    saas: [
+        {
+            title: "SaaS Dashboard",
+            description: "A neatly design SaaS dashboard",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "SaaS"
+        },
+    ],
+    ecommerce: [
+        {
+            title: "Vanta Boutique",
+            description: "A classy and modern E-commerce website",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "ecommerce"
+        },
+    ],
+    dashboards: [
+        {
+            title: "Admin Panel",
+            description: "A modern and clean admin panel",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "Dashboard"
+        },
+    ],
+    webapps: [
+        {
+            title: "Task Management App",
+            description: "A handy and interactive to-do list App",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "WebApp"
+        },
+    ],
+    landings: [
+        {
+            title: "Landing Page",
+            description: "A unique and elegant landing page",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "Landing Page"
+        },
+    ],
+    fun: [
+        {
+            title: "CSS/JS Animation",
+            description: "A unique and fun UI",
+            techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+            thumbnail: project1Img,
+            liveDemo: "https://example.com",
+            repo: "https://github.com/meranHM/my-website",
+            video: project1Img,
+            category: "Fun & Experimental"
+        },
+    ],
+}

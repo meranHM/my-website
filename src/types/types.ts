@@ -35,3 +35,28 @@ export interface FadeInSectionProps {
 export interface GlitchTransitionProps {
   children: ReactNode
 }
+
+export interface ProjectCategory {
+    title: string
+    description: string
+    techStack: string[]
+    thumbnail: string
+    liveDemo: string
+    repo: string
+    video: string
+    category: string
+}
+
+export interface CategorySectionProps {
+  projects: ProjectCategory[]
+  title: string
+}
+
+export interface ProjectsCarouselProps {
+  projects: ProjectCategory[]
+}
+
+
+
+
+
