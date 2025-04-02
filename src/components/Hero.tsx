@@ -1,6 +1,5 @@
 
 
-
 const Hero = () => {
   return (
     <section

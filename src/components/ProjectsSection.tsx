@@ -6,19 +6,19 @@ import { motion } from "framer-motion"
 const ProjectsSection = () => {
   const [hovered, setHovered] = useState<number | null >(null)
 
-  const projectElements = projects.map((project) => (
+  const projectElements = projects.map((project, index) => (
     <motion.div
-      key={project.id}
-      className="relative w-full aspect-square cursor-pointer z-50 overflow-hidden bg-color-cyberBlack rounded-lg shadow-tv"
+      key={index}
+      className="relative w-full aspect-square cursor-pointer z-50 overflow-hindexden bg-color-cyberBlack rounded-lg shadow-tv"
       whileHover={{ scale: 1.05 }}
-      onMouseEnter={ () => setHovered(project.id) }
+      onMouseEnter={ () => setHovered(index) }
       onMouseLeave={ () => setHovered(null) }
       onClick={ () => window.open(project.liveDemo, "_blank") }
     >
 
       <div className="tv-noise"></div>
 
-      { hovered === project.id ? (
+      { hovered === index ? (
         <video 
           src={project.video}
           autoPlay
