@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
+import MatrixRain from "../components/MatrixRain"
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false)
@@ -21,8 +22,12 @@ const Contact = () => {
 
   return (
     <div
-      className="min-h-screen bg-black text-green-400 flex flex-col items-center justify-center p-8 z-50"
+      className=" relative min-h-screen bg-[#06080a] text-green-400 flex flex-col items-center justify-center p-8 z-50"
     >
+      <div className="absolute left-5 top-0 h-full w-10 flex flex-col">
+        <MatrixRain />
+      </div>
+
       <motion.div
         className="text-lg text-center mb-6"
         initial={{ opacity: 0 }}
@@ -105,6 +110,9 @@ const Contact = () => {
         </motion.div>
       )}
 
+      <div className="absolute right-5 top-0 h-full w-10 flex flex-col">
+        <MatrixRain />
+      </div>
     </div>
   )
 }

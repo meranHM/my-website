@@ -1,4 +1,4 @@
-import project1Img from "../assets/projects/cyberpunk-portfolio/thumbnail.png"
+
 
 //Header NavBar
 export const navigation = [
@@ -144,108 +144,6 @@ ACCESSING KNOWLEDGE ARCHIVE...`
 export const miniTerminalMessageXP = `ACCESSING PERSONAL CORE DIRECTIVE...  
 LOG ENTRY INITIATED..`
 
-
-// Projects
-export const projects = [
-    {
-        id: 1,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: "/images/cyberpunk-portfolio.png"
-    },
-    {
-        id: 2,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 3,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 4,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 5,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 6,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-    {
-        id: 7,
-        title: "Cyberpunk Portfolio",
-        description: "A futuristic portfolio website with a hacker aesthetic.",
-        techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-        thumbnail: project1Img,
-        liveDemo: "https://example.com",
-        repo: "https://github.com/meranHM/my-website",
-        featured: true,
-        date: "2025-03-28",
-        status: "In Progress",
-        tag: "Portfolio",
-        video: project1Img
-    },
-]
 
 // System Diagnostic Content
 export const skillSet = [
