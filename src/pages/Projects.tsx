@@ -1,4 +1,4 @@
-import CategorySection from "../components/CategorySection"
+import CategorySection from "../components/projects/CategorySection"
 import { projectsObj } from "../constants/projects"
 
 

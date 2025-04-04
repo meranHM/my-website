@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { FadeInSectionProps } from "../types/types"
-import useInView from "../hooks/useInView"
+import { FadeInSectionProps } from "../../types/types"
+import useInView from "../../hooks/useInView"
 
 
 const FadeInSection: React.FC<FadeInSectionProps> = ({ children, className }) => {

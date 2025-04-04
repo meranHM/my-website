@@ -4,13 +4,13 @@ import {
   miniTerminalMessageProjects,
   miniTerminalMessageCTA,
   miniTerminalMessageBlog } from "../constants"
-import MiniTerminal from "../components/MiniTerminal"
-import Hero from "../components/Hero"
-import FadeInSection from "../components/FadeInSection"
-import ProjectsSection from "../components/ProjectsSection"
-import CTASection from "../components/CTASection"
-import SkillSet from "../components/SkillSet"
-import BlogSection from "../components/BlogSection"
+import MiniTerminal from "../components/design/MiniTerminal"
+import Hero from "../components/home/Hero"
+import FadeInSection from "../components/design/FadeInSection"
+import ProjectsSection from "../components/home/ProjectsSection"
+import CTASection from "../components/home/CTASection"
+import SkillSet from "../components/home/SkillSet"
+import BlogSection from "../components/home/BlogSection"
 
 
 const Home = () => {

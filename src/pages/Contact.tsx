@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
-import MatrixRain from "../components/MatrixRain"
+import MatrixRain from "../components/design/MatrixRain"
 
 const Contact = () => {
   const [messageSent, setMessageSent] = useState(false)

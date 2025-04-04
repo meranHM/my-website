@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { timelineData } from "../constants"
+import { timelineData } from "../../constants"
 
 const Timeline = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -33,7 +33,7 @@ const Timeline = () => {
                             {item.year} - {item.title}
                         </h3>
                         <motion.p
-                            className="text-sm text-gray-300 mt-2"
+                            className="text-sm md:text-lg text-gray-300 mt-2"
                             animate={{ opacity: hoveredIndex === index ? 1 : 0.6 }}
                         >
                             {item.description}

@@ -1,5 +1,5 @@
-import MainTerminal from "../components/MainTerminal"
-import { MovingBackground } from "../components/MovingBackground"
+import MainTerminal from "../components/landing/MainTerminal"
+import { MovingBackground } from "../components/design/MovingBackground"
 import { useRef } from "react"
 
 

@@ -1,8 +1,8 @@
-import FadeInSection from "../components/FadeInSection"
-import PersonalStatement from "../components/PersonalStatement"
-import SkillsetModules from "../components/SkillsetModules"
-import SystemProfile from "../components/SystemProfile"
-import Timeline from "../components/Timeline"
+import FadeInSection from "../components/design/FadeInSection"
+import PersonalStatement from "../components/about/PersonalStatement"
+import SkillsetModules from "../components/about/SkillsetModules"
+import SystemProfile from "../components/about/SystemProfile"
+import Timeline from "../components/about/Timeline"
 
 
 const About = () => {

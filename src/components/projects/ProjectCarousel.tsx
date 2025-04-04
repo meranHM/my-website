@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ProjectsCarouselProps } from "../types/types"
+import { ProjectsCarouselProps } from "../../types/types"
 
 const ProjectCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   return (

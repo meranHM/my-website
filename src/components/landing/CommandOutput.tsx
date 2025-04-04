@@ -1,4 +1,4 @@
-import { CommandOutputProps } from "../types/types"
+import { CommandOutputProps } from "../../types/types"
 import { motion } from "framer-motion"
 
 const CommandOutput: React.FC<CommandOutputProps> = ({ commandHistory }) => {

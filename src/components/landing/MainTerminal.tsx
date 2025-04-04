@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
-import { asciiArt, allWelcomeMessages, commands } from "../constants"
-import GlitchEffect from './GlitchEffect'
+import { asciiArt, allWelcomeMessages, commands } from "../../constants"
+import GlitchEffect from '../design/GlitchEffect'
 import TerminalNavbar from './TerminalNavbar'
-import CommandInput from './CommandInput'
+import CommandInput from '../CommandInput'
 import CommandOutput from './CommandOutput'
 import { useNavigate } from 'react-router'
 
@@ -82,7 +82,7 @@ const MainTerminal = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
         setShowComponent(true)
-    },2000)
+    },2200)
 
     return () => clearTimeout(timer)
   }, [])
@@ -95,8 +95,6 @@ const MainTerminal = () => {
   }, [commandHistory, showComponent])
 
   //Adding the typewriter effect for the welcome message
-
-
   useEffect(() => {
     if (hasStartedTyping.current) return;
     hasStartedTyping.current = true
@@ -111,7 +109,7 @@ const MainTerminal = () => {
             if (charIndex < sentence.length - 1) {
                 setCurrentMessage((prev) => prev + sentence[charIndex])
                 charIndex++
-                setTimeout(typewriter, 5)
+                setTimeout(typewriter, 10)
             } else {
                 setTimeout(() => {
                     setCurrentMessage((prev) => prev + "\n")
@@ -124,7 +122,6 @@ const MainTerminal = () => {
         typewriter()
     }
   }, [index, messages])
-
 
 
   return (
@@ -145,7 +142,7 @@ const MainTerminal = () => {
             <div className="w-12"/>
         </div>
     <div 
-        className="p-4 max-h-[80vh] min-h-[300px] overflow-y-auto terminal-glow"
+        className="p-4 max-h-[80dvh] min-h-[400px] overflow-y-auto terminal-glow"
         ref={outputRef}
         id="terminal-message"
     >
@@ -155,7 +152,7 @@ const MainTerminal = () => {
         >
           {asciiArt}
         </GlitchEffect>
-        <pre className="text-md md:text-lg text-wrap scanline p-3">
+        <pre className="text-xs md:text-lg text-wrap scanline p-3">
             {currentMessage}
         </pre>
         {showComponent && (

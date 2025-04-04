@@ -6,7 +6,7 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import { AnimatePresence } from "framer-motion"
-import GlitchTransition from "./components/GlitchTransition"
+import GlitchTransition from "./components/design/GlitchTransition"
 
 
 const App = () => {

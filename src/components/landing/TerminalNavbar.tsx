@@ -1,4 +1,4 @@
-import { navigation } from "../constants"
+import { navigation } from "../../constants"
 import { Link } from "react-router"
 import { useEffect, useRef, useState } from "react"
 

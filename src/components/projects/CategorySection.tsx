@@ -1,5 +1,5 @@
-import { CategorySectionProps } from "../types/types"
-import MatrixDivider from "./MatrixDivider"
+import { CategorySectionProps } from "../../types/types"
+import MatrixDivider from "../design/MatrixDivider"
 import ProjectCarousel from "./ProjectCarousel"
 
 const CategorySection: React.FC<CategorySectionProps> = ({ title, projects }) => {

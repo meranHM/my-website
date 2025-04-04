@@ -1,4 +1,4 @@
-import MiniTerminal from "./MiniTerminal"
+import MiniTerminal from "../design/MiniTerminal"
 
 
 const PersonalStatement = () => {

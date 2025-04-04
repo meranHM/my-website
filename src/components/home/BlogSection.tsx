@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { blogPosts } from "../constants/blogPosts"
+import { blogPosts } from "../../constants/blogPosts"
 
 
 

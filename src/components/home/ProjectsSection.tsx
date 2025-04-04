@@ -1,4 +1,4 @@
-import { projects } from "../constants/projects"
+import { projects } from "../../constants/projects"
 import { useState } from "react"
 import { motion } from "framer-motion"
 

@@ -50,14 +50,14 @@ export const welcomeMessage4 = [
     "  RETRIEVING MISSION FILES...",
     "  DECRYPTION SUCCESSFUL...",
     "  TARGET COORDINATES LOCKED...",
-    "  MISSION STATUS: ACTIVE. PROCEED WITH CAUTION.",
+    "  MISSION STATUS: ACTIVE.",
 ]
 
 export const welcomeMessage5 = [
     "  ESTABLISHING SECURE CONNECTION...",
     "  ENCRYPTION KEY EXCHANGED...",
     "  DATA STREAM SYNCHRONIZED...",
-    "  CONNECTION STABLE. READY FOR TRANSMISSION.",
+    "  CONNECTION STABLE.",
 ]
 
 export const welcomeMessage6 = [

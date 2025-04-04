@@ -1,4 +1,4 @@
-import { skills } from "../constants"
+import { skills } from "../../constants"
 import { motion } from "framer-motion"
 
 const SkillCard = ({ skill }: { skill: string }) => {

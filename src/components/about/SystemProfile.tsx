@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import avatar from "../assets/avatar.png"
+import avatar from "../../assets/avatar.png"
 
 
 const SystemProfile = () => {
