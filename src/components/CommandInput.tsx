@@ -1,6 +1,82 @@
 import { CommandInputProps } from "../types/types"
+import { useSelector, useDispatch } from "react-redux"
+import { RootState } from "../store/store"
+import { 
+  setUserInput,
+  addCommandToHistory,
+  clearHistory
+} from "../store/slices/terminalSlice"
+import { useNavigate } from "react-router"
+import { commands } from "../constants"
 
-const CommandInput: React.FC<CommandInputProps> = ({ handleChange,handleKeyDown, userInput, className }) => {
+
+
+const CommandInput: React.FC<CommandInputProps> = ({ className }) => {
+  const userInput = useSelector((state: RootState) => state.terminal.userInput)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+
+  const handleCommand = (command: string) => {
+    let newHistory = [`> ${command}`]
+  
+    switch (command.toLocaleLowerCase().trim()) {
+        case "help":
+            newHistory.push(
+              "Available commands:",
+              "help - Show available commands",
+              "clear - Clear the terminal",
+              "cd home - Go to Home page",
+              "cd projects - Go to Projects page",
+              "cd about - Go to About page",
+              "cd contact - Go to Contact page",
+            )
+            break
+  
+        case "clear":
+            dispatch(clearHistory())
+            return
+              
+        case "cd home":    
+        case "cd projects":    
+        case "cd about":    
+        case "cd contact":
+            navigate(`${command.split(" ")[1]}`)
+            break
+          
+        default:
+            newHistory.push("Unknown command. Type 'help' for a list of commands.")    
+    }
+  
+    dispatch(addCommandToHistory(newHistory))
+    }
+
+    // Handling keydowns
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter" && userInput.trim() !== "") {
+          dispatch(setUserInput(""))
+          handleCommand(userInput)
+      } else if (e.key === "Tab") {
+          e.preventDefault()
+  
+          const matches = commands.filter(cmd => cmd.startsWith(userInput))
+  
+          if (matches.length === 1) {
+              dispatch(setUserInput(matches[0]))
+          } else if (matches.length > 1) {
+              dispatch(addCommandToHistory([
+                  `> ${userInput}`,
+                  `Suggestions: ${matches.join(", ")}`
+              ]))
+              dispatch(setUserInput(""))
+          }
+      }
+    }
+
+  // Handling user input
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(setUserInput(e.currentTarget.value))
+  }
 
   return (
     <div 

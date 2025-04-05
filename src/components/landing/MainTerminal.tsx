@@ -1,17 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
-import { 
-    setUserInput,
-    addCommandToHistory,
-    clearHistory
-} from '../../store/slices/terminalSlice'
-import { asciiArt, allWelcomeMessages, commands } from "../../constants"
+import { asciiArt, allWelcomeMessages } from "../../constants"
 import GlitchEffect from '../design/GlitchEffect'
 import TerminalNavbar from './TerminalNavbar'
 import CommandInput from '../CommandInput'
 import CommandOutput from './CommandOutput'
-import { useNavigate } from 'react-router'
+
 
 
 
@@ -19,76 +14,12 @@ const MainTerminal = () => {
   const [currentMessage, setCurrentMessage] = useState<string>("");
   const [index, setIndex] = useState<number>(0);
   const [showComponent, setShowComponent] = useState<boolean>(false)
-  const dispatch = useDispatch()
   const commandHistory = useSelector((state: RootState) => state.terminal.commandHistory)
-  const userInput = useSelector((state: RootState) => state.terminal.userInput)
-  const navigate = useNavigate()
   const outputRef = useRef<HTMLDivElement>(null)
   const hasStartedTyping = useRef(false)
   const [randomIndex] = useState<number>(Math.floor(Math.random() * allWelcomeMessages.length))
   const messages:string[] = allWelcomeMessages[randomIndex]
 
-  // Handling user commands
-  const handleCommand = (command: string) => {
-    let newHistory = [`> ${command}`]
-
-    switch (command.toLocaleLowerCase().trim()) {
-        case "help":
-            newHistory.push(
-                "Available commands:",
-                "help - Show available commands",
-                "clear - Clear the terminal",
-                "cd home - Go to Home page",
-                "cd projects - Go to Projects page",
-                "cd about - Go to About page",
-                "cd contact - Go to Contact page",
-            )
-            break
-
-        case "clear":
-            dispatch(clearHistory())
-            return
-            
-        case "cd home":    
-        case "cd projects":    
-        case "cd about":    
-        case "cd contact":
-            navigate(`${command.split(" ")[1]}`)
-            break
-        
-        default:
-            newHistory.push("Unknown command. Type 'help' for a list of commands.")    
-    }
-
-    dispatch(addCommandToHistory(newHistory))
-  }
-
-  // Handling keydowns
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && userInput.trim() !== "") {
-        dispatch(setUserInput(""))
-        handleCommand(userInput)
-    } else if (e.key === "Tab") {
-        e.preventDefault()
-
-        const matches = commands.filter(cmd => cmd.startsWith(userInput))
-
-        if (matches.length === 1) {
-            dispatch(setUserInput(matches[0]))
-        } else if (matches.length > 1) {
-            dispatch(addCommandToHistory([
-                `> ${userInput}`,
-                `Suggestions: ${matches.join(", ")}`
-            ]))
-            dispatch(setUserInput(""))
-        }
-    }
-  }
-
-  // Handling user input
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setUserInput(e.currentTarget.value))
-  }
 
   // Delay rendering certain components
   useEffect(() => {
@@ -179,11 +110,7 @@ const MainTerminal = () => {
             </>
         )}
     </div>
-    <CommandInput 
-        handleKeyDown={handleKeyDown}
-        handleChange={handleChange}
-        userInput={userInput}
-    />
+    <CommandInput />
 </div>
   )
 }
