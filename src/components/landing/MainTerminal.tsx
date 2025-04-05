@@ -1,4 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../../store/store'
+import { 
+    setUserInput,
+    addCommandToHistory,
+    clearHistory
+} from '../../store/slices/terminalSlice'
 import { asciiArt, allWelcomeMessages, commands } from "../../constants"
 import GlitchEffect from '../design/GlitchEffect'
 import TerminalNavbar from './TerminalNavbar'
@@ -12,8 +19,9 @@ const MainTerminal = () => {
   const [currentMessage, setCurrentMessage] = useState<string>("");
   const [index, setIndex] = useState<number>(0);
   const [showComponent, setShowComponent] = useState<boolean>(false)
-  const [commandHistory, setCommandHistory] = useState<string[]>(["Enter 'help' to see available commands.",])
-  const [userInput, setUserInput] = useState<string>("") 
+  const dispatch = useDispatch()
+  const commandHistory = useSelector((state: RootState) => state.terminal.commandHistory)
+  const userInput = useSelector((state: RootState) => state.terminal.userInput)
   const navigate = useNavigate()
   const outputRef = useRef<HTMLDivElement>(null)
   const hasStartedTyping = useRef(false)
@@ -22,7 +30,7 @@ const MainTerminal = () => {
 
   // Handling user commands
   const handleCommand = (command: string) => {
-    let newHistory = [...commandHistory, `>${command}`]
+    let newHistory = [`> ${command}`]
 
     switch (command.toLocaleLowerCase().trim()) {
         case "help":
@@ -38,8 +46,8 @@ const MainTerminal = () => {
             break
 
         case "clear":
-            newHistory = []
-            break
+            dispatch(clearHistory())
+            return
             
         case "cd home":    
         case "cd projects":    
@@ -52,30 +60,34 @@ const MainTerminal = () => {
             newHistory.push("Unknown command. Type 'help' for a list of commands.")    
     }
 
-    setCommandHistory(newHistory)
+    dispatch(addCommandToHistory(newHistory))
   }
 
   // Handling keydowns
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && userInput.trim() !== "") {
-        setUserInput("")
+        dispatch(setUserInput(""))
         handleCommand(userInput)
     } else if (e.key === "Tab") {
         e.preventDefault()
 
         const matches = commands.filter(cmd => cmd.startsWith(userInput))
+
         if (matches.length === 1) {
-            setUserInput(matches[0])
+            dispatch(setUserInput(matches[0]))
         } else if (matches.length > 1) {
-            setCommandHistory([...commandHistory, `> ${userInput}`, `Suggestions: ${matches.join(", ")}`])
-            setUserInput("")
+            dispatch(addCommandToHistory([
+                `> ${userInput}`,
+                `Suggestions: ${matches.join(", ")}`
+            ]))
+            dispatch(setUserInput(""))
         }
     }
   }
 
   // Handling user input
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserInput(e.currentTarget.value)
+    dispatch(setUserInput(e.currentTarget.value))
   }
 
   // Delay rendering certain components
@@ -102,8 +114,6 @@ const MainTerminal = () => {
     if (index < messages.length) {
         let charIndex = 0
         const sentence = messages[index]
-
-
 
         const typewriter = () => {
             if (charIndex < sentence.length - 1) {
@@ -179,15 +189,3 @@ const MainTerminal = () => {
 }
 
 export default MainTerminal
-
-
- /*  useEffect(() => {
-      if (index < messages.length) {
-      const timer = setTimeout(() => {
-          setCurrentMessage((prev) => `${prev}\n${messages[index]}`)
-          setIndex(i => i + 1);
-      }, 800);
-
-      return () => clearTimeout(timer);
-      }
-  }, [index, messages]); */
