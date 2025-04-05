@@ -9,7 +9,7 @@ const getRandomStyles = () =>  ({
     textShadow: Math.random() > 0.5 ? "0px 0px 6px rgba(0, 255, 0, 0.5)" : "none",
 })
 
-const MatrixColumn = () => {
+const MatrixRain = () => {
     const randDuration = useMemo(() => Math.floor(Math.random() * 4) + 7, [] )
     const matrixData = useMemo(() =>
             Array.from({ length: 30 }).map( _ => ({
@@ -42,4 +42,4 @@ const MatrixColumn = () => {
   );
 };
 
-export default MatrixColumn;
+export default MatrixRain;

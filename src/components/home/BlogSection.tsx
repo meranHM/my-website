@@ -5,7 +5,7 @@ import { blogPosts } from "../../constants/blogPosts"
 
 
 const BlogSection = () => {
-    const sliderRef = useRef(null)
+    const sliderRef = useRef<HTMLDivElement>(null)
 
   return (
     <section

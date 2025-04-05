@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
     <div
-      className=" relative min-h-screen bg-[#06080a] text-green-400 flex flex-col items-center justify-center p-8 z-50"
+      className=" relative min-h-screen bg-[#06080a] text-green-400 flex flex-col items-center justify-center p-8 z-50 overflow-hidden"
     >
       <div className="absolute left-5 top-0 h-full w-10 flex flex-col">
         <MatrixRain />
@@ -110,7 +110,7 @@ const Contact = () => {
         </motion.div>
       )}
 
-      <div className="absolute right-5 top-0 h-full w-10 flex flex-col">
+      <div className="absolute right-0 top-0 h-full w-10 flex flex-col">
         <MatrixRain />
       </div>
     </div>
