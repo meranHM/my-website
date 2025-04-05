@@ -1,5 +1,5 @@
 import { useEffect} from 'react'
-import { GlitchEffectProps } from '../types/types'
+import { GlitchEffectProps } from '../../types/types'
 
 
 const GlitchEffect: React.FC<GlitchEffectProps> = ({className, children, id}) => {

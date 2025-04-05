@@ -1,4 +1,4 @@
-import { MiniTerminalProps } from "../types/types"
+import { MiniTerminalProps } from "../../types/types"
 
 const MiniTerminal: React.FC<MiniTerminalProps> = ({message, anchor, className}) => {
 
