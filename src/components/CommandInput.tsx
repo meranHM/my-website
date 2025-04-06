@@ -6,6 +6,7 @@ import {
   addCommandToHistory,
   clearHistory
 } from "../store/slices/terminalSlice"
+import { startRetroTransition } from "../store/slices/retroSlice"
 import { useNavigate } from "react-router"
 import { commands } from "../constants"
 
@@ -30,9 +31,14 @@ const CommandInput: React.FC<CommandInputProps> = ({ className }) => {
               "cd projects - Go to Projects page",
               "cd about - Go to About page",
               "cd contact - Go to Contact page",
+              "retro - Go back in time..."
             )
             break
-  
+
+        case "retro":
+          dispatch(startRetroTransition())
+          break    
+        
         case "clear":
             dispatch(clearHistory())
             return

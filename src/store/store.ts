@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit"
-import uiReducer from "./slices/uiSlice"
 import terminalReducer from "./slices/terminalSlice"
+import retroReducer from "./slices/retroSlice"
 
 export const store = configureStore({
     reducer: {
-        ui: uiReducer,
-        terminal: terminalReducer
+        terminal: terminalReducer,
+        retro: retroReducer,
     },
 })
 
