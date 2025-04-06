@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useTypewriter } from '../../hooks/useTypewriter'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
 import { asciiArt, allWelcomeMessages } from "../../constants"
@@ -11,14 +12,12 @@ import CommandOutput from './CommandOutput'
 
 
 const MainTerminal = () => {
-  const [currentMessage, setCurrentMessage] = useState<string>("");
-  const [index, setIndex] = useState<number>(0);
   const [showComponent, setShowComponent] = useState<boolean>(false)
   const commandHistory = useSelector((state: RootState) => state.terminal.commandHistory)
   const outputRef = useRef<HTMLDivElement>(null)
-  const hasStartedTyping = useRef(false)
   const [randomIndex] = useState<number>(Math.floor(Math.random() * allWelcomeMessages.length))
   const messages:string[] = allWelcomeMessages[randomIndex]
+  const currentMessage = useTypewriter(messages)
 
 
   // Delay rendering certain components
@@ -36,33 +35,6 @@ const MainTerminal = () => {
           outputRef.current.scrollTop = outputRef.current.scrollHeight
       }
   }, [commandHistory, showComponent])
-
-  //Adding the typewriter effect for the welcome message
-  useEffect(() => {
-    if (hasStartedTyping.current) return;
-    hasStartedTyping.current = true
-
-    if (index < messages.length) {
-        let charIndex = 0
-        const sentence = messages[index]
-
-        const typewriter = () => {
-            if (charIndex < sentence.length - 1) {
-                setCurrentMessage((prev) => prev + sentence[charIndex])
-                charIndex++
-                setTimeout(typewriter, 10)
-            } else {
-                setTimeout(() => {
-                    setCurrentMessage((prev) => prev + "\n")
-                    setIndex((i) => i + 1)
-                    hasStartedTyping.current = false
-                }, 200)
-            }
-        }
-
-        typewriter()
-    }
-  }, [index, messages])
 
 
   return (
