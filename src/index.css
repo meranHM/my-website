@@ -66,7 +66,7 @@
       mix-blend-mode: overlay;
     }
 
-    @keyframes neonFlicker{
+    @keyframes neonFlicker {
       0% { opacity: 0.1; }
       50% { opacity: 0.2; }
       100% { opacity: 0.15; }

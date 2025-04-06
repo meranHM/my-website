@@ -1,8 +1,16 @@
-
+import { useDispatch } from "react-redux"
+import { deactivateRetro } from "../store/slices/retroSlice"
 
 const RetroVersion = () => {
+  const dispatch = useDispatch()
+
+  const handleExitRetro = () => {
+    document.body.classList.remove("bg-white")
+    dispatch(deactivateRetro())
+  }
+
     return (
-      <div className="bg-white text-black min-h-screen font-serif px-4 py-8 max-w-3xl mx-auto">
+      <div className="text-black min-h-screen font-serif bg-[#fefefe] px-4 py-8 max-w-3xl mx-auto">
         <header className="text-center border-b border-black pb-4 mb-6">
           <h1 className="text-4xl font-bold uppercase">The Mehran Times</h1>
           <p className="text-sm mt-2">Est. 2025 | Web Developer Edition</p>
@@ -37,7 +45,12 @@ const RetroVersion = () => {
   
         <footer className="text-center border-t border-black pt-4 mt-10 text-sm">
           <p>&copy; 2025 The Mehran Times. All Rights Reserved.</p>
-          <p className="mt-2">Return to normal mode: <span className="underline cursor-pointer">exit retro</span></p>
+          <button
+            onClick={() => handleExitRetro()}
+            className="mt-8 underline text-blue-700 hover:text-red-500"
+          >
+            Exit Retro Mode
+          </button>
         </footer>
       </div>
     )

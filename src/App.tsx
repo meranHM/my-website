@@ -15,7 +15,8 @@ import RetroVersion from "./pages/RetroVersion"
 
 const App = () => {
   const location = useLocation()
-  const { isRetro, isRetroPending } = useSelector((state: RootState) => state.retro)
+  const { isRetro, isRetroPending, shake } = useSelector((state: RootState) => state.retro)
+  
 
   if (isRetroPending) {
     return <RetroTransition />
@@ -27,18 +28,20 @@ const App = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <>
-      <GlitchTransition key={location.pathname} />
-      <Routes location={location}>
-        <Route path="/" element={<Landing />}/>
-        <Route element={<MainLayout />}>
-          <Route path="/home" element={<Home />}/>
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/contact" element={<Contact />}/>
-        </Route>
-      </Routes>
-      </>
+      <div
+        id="app-wrapper" className={ shake ? "animate-retroShake" : "" }
+      >
+        <GlitchTransition key={location.pathname} />
+        <Routes location={location}>
+          <Route path="/" element={<Landing />}/>
+          <Route element={<MainLayout />}>
+            <Route path="/home" element={<Home />}/>
+            <Route path="/projects" element={<Projects />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/contact" element={<Contact />}/>
+          </Route>
+        </Routes>
+      </div>
     </AnimatePresence>
   )
 }

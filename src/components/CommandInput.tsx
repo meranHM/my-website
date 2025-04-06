@@ -36,7 +36,18 @@ const CommandInput: React.FC<CommandInputProps> = ({ className }) => {
             break
 
         case "retro":
-          dispatch(startRetroTransition())
+          const wrapper = document.getElementById("app-wrapper")
+          document.body.classList.add("bg-white")
+          if (wrapper) {
+            wrapper.classList.add("animate-retroShake")
+          }
+
+          setTimeout(() => {
+            if (wrapper) {
+              wrapper.classList.remove("animate-retroShake")
+            }
+            dispatch(startRetroTransition())
+          }, 3000)
           break    
         
         case "clear":

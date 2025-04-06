@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { activateRetro } from "../../store/slices/retroSlice"
+import RetroFlicker from "./RetroFlicker"
 
 const RetroTransition = () => {
     const dispatch = useDispatch()
@@ -17,7 +18,7 @@ const RetroTransition = () => {
 
   return (
     <div
-        className="fixed top-0 left-0 w-full h-full bg-black z-[999] flex flex-col justify-center items-center text-green-400 font-mono text-xl overflow-hidden glitch"
+        className="fixed top-0 left-0 w-full h-full bg-white z-[999] flex flex-col justify-center items-center text-green-400 font-mono text-xl overflow-hidden glitch"
     >
         <motion.div
             className="mb-4"
@@ -43,6 +44,7 @@ const RetroTransition = () => {
                 transition={{ duration: 3.5 }}
             />
         </motion.div>
+        <RetroFlicker />
     </div>
   )
 }

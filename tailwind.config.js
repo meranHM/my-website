@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import { keyframes, m } from "framer-motion";
 import { fontFamily } from "tailwindcss/defaultTheme"
 import plugin from "tailwindcss/plugin";
-import { transform } from "typescript";
+
 
 
 export default {
@@ -75,6 +74,8 @@ export default {
         starEffect: "starEffect 10s infinite ease-in-out forwards",
         tvGlitch: "vhsStyle 1.5s infinite steps(5), signalLoss 10s infinite",
         fadeIn: "fadeIn 1.5s ease-in-out infinite",
+        retroShake: "retroShake 0.3s infinite",
+        retroFlicker: "retroFlicker 0.12s infinite",
       },
       keyframes: {
         starEffect: {
@@ -83,11 +84,11 @@ export default {
           "100%": {opacity: "0.1"},
         },
         vhsStyle: {
-          "0%": { transform: "transform: translate(0, 0)", opacity: "1" },
-          "25%": { transform: "transform: translate(-1px, 1px)", opacity: "0.9" },
-          "50%": { transform: "transform: translate(1px, -1px)", opacity: "1" },
-          "75%": { transform: "transform: translate(-0.5px, 0.5px)", opacity: "0.85" },
-          "100%": { transform: "transform: translate(0, 0)", opacity: "1" },
+          "0%": { transform: "translate(0, 0)", opacity: "1" },
+          "25%": { transform: "translate(-1px, 1px)", opacity: "0.9" },
+          "50%": { transform: "translate(1px, -1px)", opacity: "1" },
+          "75%": { transform: "translate(-0.5px, 0.5px)", opacity: "0.85" },
+          "100%": { transform: "translate(0, 0)", opacity: "1" },
         },
         signalLoss: {
           "0%, 95%": { opacity: "1", filter: "none" },
@@ -98,8 +99,19 @@ export default {
           "100%": { opacity: "1", filter: "none" },
         },
         fadeIn: {
-          "0%, 100%" : { opacity: 0 },
-          "50": { opacity: 1 },
+          "0%, 100%" : { opacity: "0" },
+          "50": { opacity: "1" },
+        },
+        retroShake: {
+          "0%": { transform: "translate(0)" },
+          "25%": { transform: "translate(-2px, 2px)" },
+          "50%": { transform: "translate(2px, -2px)" },
+          "75%": { transform: "translate(-2px, 2px)" },
+          "100%": { transform: "translate(0)" },
+        },
+        retroFlicker: {
+          "0%, 100%": { opacity: "0.02" },
+          "50%": { opacity: "0.06" }
         }
       },
     },
