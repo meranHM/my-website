@@ -1,7 +1,11 @@
-import { CommandOutputProps } from "../../types/types"
 import { motion } from "framer-motion"
+import { useSelector } from "react-redux"
+import { RootState } from "../../store/store"
+import { CommandOutputProps } from "../../types/types"
 
-const CommandOutput: React.FC<CommandOutputProps> = ({ commandHistory }) => {
+
+const CommandOutput: React.FC<CommandOutputProps> = ( { className } ) => {
+  const commandHistory = useSelector((state: RootState) => state.terminal.commandHistory)
 
   const SuggestionVariants = {
     hidden: { opacity: 0, y: -10},
@@ -18,7 +22,7 @@ const CommandOutput: React.FC<CommandOutputProps> = ({ commandHistory }) => {
           initial="hidden"
           animate="visible"
           variants={SuggestionVariants}
-          className={`${item.startsWith("Suggestions") ? "text-blue-400" : ""} mt-2`}
+          className={`${item.startsWith("Suggestions") ? "text-blue-400" : ""} mt-2 ${className || ""}`}
         >
           {item}
         </motion.p>

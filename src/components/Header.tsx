@@ -1,11 +1,11 @@
 import msLogo from "../assets/ms-logo.webp"
 import { Link, NavLink, useLocation } from "react-router"
 import { navigation } from "../constants"
-import CommandInput from "./CommandInput"
 import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll"
 import {  useState } from "react"
 import { HamburgerMenu } from "./HamburgerMenu"
 import MenuSvg from "../assets/svg/MenuSvg"
+import HeaderTerminal from "./HeaderTerminal"
 
 
 const Header = () => {
@@ -55,6 +55,9 @@ const Header = () => {
               <div
                 className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row"
               >
+                <HeaderTerminal 
+                  className="lg:hidden mb-20"
+                />
                 {navigation.map(item => (
                   <NavLink
                     key={item.id}
@@ -72,9 +75,10 @@ const Header = () => {
               <HamburgerMenu />
             </nav>
 
-            <CommandInput 
+            <HeaderTerminal 
               className="hidden lg:block"
             />
+
             <button
               className="ml-auto neon-border p-1 hover:glitch rounded-lg lg:hidden"
               onClick={toggleNavigation}

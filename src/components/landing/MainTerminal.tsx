@@ -67,7 +67,7 @@ const MainTerminal = () => {
 
   return (
     <div 
-        className="w-[90vw] max-w-3xl z-50 mx-auto mt-10 bg-color-terminalBlack rounded-lg shadow-lg neon-border"
+        className="w-[90vw] max-w-3xl z-50 mx-auto mt-10 bg-color-terminalBlack rounded-lg neon-border overflow-hidden"
         id="terminal"
     >
         <div
@@ -104,9 +104,7 @@ const MainTerminal = () => {
                 Navigate using the system menu or enter a command.
                 </h2>
                 <TerminalNavbar />
-                <CommandOutput 
-                    commandHistory={commandHistory}
-                />     
+                <CommandOutput />
             </>
         )}
     </div>

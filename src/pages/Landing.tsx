@@ -22,7 +22,6 @@ const Landing = () => {
             parallaxRef={parallaxRef}
           />
       </section>
-
     </>
   )
 }

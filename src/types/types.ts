@@ -14,7 +14,7 @@ export interface CommandInputProps {
 }
 
 export interface CommandOutputProps {
-  commandHistory: string[]
+  className?: string
 }
 
 export interface MenuSvgProps {
@@ -53,6 +53,10 @@ export interface CategorySectionProps {
 
 export interface ProjectsCarouselProps {
   projects: ProjectCategory[]
+}
+
+export interface HeaderTerminalProps {
+  className?: string
 }
 
 
