@@ -55,15 +55,12 @@ const Header = () => {
               <div
                 className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row"
               >
-                <HeaderTerminal 
-                  className="lg:hidden mb-20"
-                />
                 {navigation.map(item => (
                   <NavLink
                     key={item.id}
                     to={item.url}
                     onClick={handleClick}
-                    className={`block relative text-2xl uppercase transition-colors hover:glitch px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold lg:leading-5 xl:px-12 ${item.url === location.pathname
+                    className={`block relative text-2xl uppercase z-[999] transition-colors hover:glitch px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-sm lg:font-semibold lg:leading-5 xl:px-12 ${item.url === location.pathname
                       ? "z-2 lg:text-color-neonCyan"
                       : "lg: text-gray-500"
                     } `}
