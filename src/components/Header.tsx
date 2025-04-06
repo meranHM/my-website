@@ -1,5 +1,5 @@
 import msLogo from "../assets/ms-logo.webp"
-import { Link, NavLink, useLocation } from "react-router"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import { navigation } from "../constants"
 import { disablePageScroll, enablePageScroll } from "@fluejs/noscroll"
 import {  useState } from "react"
