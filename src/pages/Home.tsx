@@ -24,7 +24,7 @@ const Home = () => {
         <MiniTerminal 
           message={miniTerminalMessageHero}
           anchor="#hero"
-          className="mb-8"
+          className="mb-6 md:mb-8"
         />
         <Hero />
       </FadeInSection>
@@ -33,7 +33,7 @@ const Home = () => {
         <MiniTerminal 
           message={miniTerminalMessageSkills}
           anchor="#skills"
-          className="mb-8"
+          className="mb-6 md:mb-8"
         />
         <SkillSet />
       </FadeInSection>
@@ -44,7 +44,7 @@ const Home = () => {
         <MiniTerminal 
           message={miniTerminalMessageProjects}
           anchor="#projects"
-          className="mb-8"
+          className="mb-6 md:mb-8"
         />
         <ProjectsSection />
       </FadeInSection>
@@ -55,7 +55,7 @@ const Home = () => {
         <MiniTerminal 
           message={miniTerminalMessageCTA}
           anchor="#CTA"
-          className="mb-8"
+          className="mb-6 md:mb-8"
         />
         <CTASection />
       </FadeInSection>
@@ -66,7 +66,7 @@ const Home = () => {
         <MiniTerminal 
           message={miniTerminalMessageBlog}
           anchor="#logs"
-          className="mb-8"
+          className="mb-6 md:mb-8"
         />
         <BlogSection />
       </FadeInSection>

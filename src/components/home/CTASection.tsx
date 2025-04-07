@@ -9,7 +9,7 @@ const CTASection = () => {
         transition={{ duration: 1 }}
     >
         <div
-            className="relative w-full max-w-3xl h-64 flex flex-col justify-center p-6 rounded-lg bg-opacity-10 backdrop-blur-lg border border-color-neonCyan shadow-lg shadow-color-neonCyan/30"
+            className="relative w-full max-w-3xl flex flex-col justify-center p-6 rounded-lg bg-opacity-10 backdrop-blur-lg border border-color-neonCyan shadow-lg shadow-color-neonCyan/30"
         >
             <div
                 className="absolute inset-0 bg-gradient-to-b from-transparent via-color-neonCyan/10 to-transparent scanline"

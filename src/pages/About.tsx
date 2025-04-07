@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section className="relative z-[888]">
       <FadeInSection
-        className="mt-20 py-20"
+        className="md:mt-20 md:py-20"
       >
         <SystemProfile />
       </FadeInSection>

@@ -6,7 +6,7 @@ import { asciiArt, allWelcomeMessages } from "../../constants"
 import GlitchEffect from '../design/GlitchEffect'
 import TerminalNavbar from './TerminalNavbar'
 import CommandInput from '../CommandInput'
-import CommandOutput from './CommandOutput'
+import CommandOutput from '../CommandOutput'
 
 
 
@@ -71,7 +71,7 @@ const MainTerminal = () => {
         {showComponent && (
             <>
                 <h2
-                className="scanline p-3 mt-1"
+                className="text-xs md:text-lg scanline p-3 mt-1"
                 >
                 Navigate using the system menu or enter a command.
                 </h2>

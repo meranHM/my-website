@@ -25,7 +25,7 @@ const BlogSection = () => {
             <motion.div
                 className="flex space-x-6"
                 drag="x"
-                dragConstraints={{ left: -400 , right: 0 }}
+                dragConstraints={{ left: -800 , right: 200 }}
             >
                 {blogPosts.map(post => (
                     <motion.div

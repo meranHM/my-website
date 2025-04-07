@@ -6,11 +6,11 @@ const SkillCard = ({ skill }: { skill: string }) => {
     
   return (
     <motion.div
-        className={`p-3 z-[999] cursor-pointer border rounded-lg shadow-md text-center ${isLocked ? "border-red-500 opacity-50" : "border-green-500"}`}
+        className={`p-2 md:p-3 z-[999] cursor-pointer border rounded-lg shadow-md text-center ${isLocked ? "border-red-500 opacity-50" : "border-green-500"}`}
         whileHover={{ scale: 1.05 }}
     >
         <h3
-            className="text-lg font-bold"
+            className="text-sm md:text-lg font-bold"
         >
             {skill}
         </h3>

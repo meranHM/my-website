@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { useSelector } from "react-redux"
-import { RootState } from "../../store/store"
-import { CommandOutputProps } from "../../types/types"
+import { RootState } from "../store/store"
+import { CommandOutputProps } from "../types/types"
 
 
 const CommandOutput: React.FC<CommandOutputProps> = ( { className } ) => {
@@ -22,7 +22,7 @@ const CommandOutput: React.FC<CommandOutputProps> = ( { className } ) => {
           initial="hidden"
           animate="visible"
           variants={SuggestionVariants}
-          className={`${item.startsWith("Suggestions") ? "text-blue-400" : ""} mt-2 ${className || ""}`}
+          className={`${item.startsWith("Suggestions") ? "text-blue-400" : ""} text-xs md:text-lg mt-2 ${className || ""}`}
         >
           {item}
         </motion.p>

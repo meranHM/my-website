@@ -126,8 +126,7 @@ export const skills = [
 export const miniTerminalMessageHero = `SYSTEM ONLINE...  
 WELCOME TO THE CYBER GRID`
 
-export const miniTerminalMessageSkills = `CORE SYSTEMS INITIALIZED...
-STATUS: ONLINE`
+export const miniTerminalMessageSkills = `CORE SYSTEMS INITIALIZED...`
 
 export const miniTerminalMessageProjects = `ACCESS GRANTED TO THE MAINFRAME...
 DATA STREAM: ACTIVED`
@@ -162,7 +161,8 @@ export const logs = [
     "Analyzing efficiency levels...",
     "Processing AI diagnostics...",
     "Compiling system performance report...",
-    "Optimization complete. STATUS: STABLE.",
+    "Optimization complete.",
+    "STATUS: STABLE.",
   ]
 
 

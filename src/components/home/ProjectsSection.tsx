@@ -9,7 +9,7 @@ const ProjectsSection = () => {
   const projectElements = projects.map((project, index) => (
     <motion.div
       key={index}
-      className="relative w-full aspect-square cursor-pointer z-50 overflow-hindexden bg-color-cyberBlack rounded-lg shadow-tv"
+      className="relative w-full aspect-square cursor-pointer z-50 overflow-hidden bg-color-cyberBlack rounded-lg shadow-tv"
       whileHover={{ scale: 1.05 }}
       onMouseEnter={ () => setHovered(index) }
       onMouseLeave={ () => setHovered(null) }
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       )}
 
       <div
-        className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 text-color-neonGreen text-sm md:text-lg font-bold text-center"
+        className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 text-color-neonGreen text-xs md:text-sm lg:-text-lg font-bold text-center"
       >
         {project.title}
       </div>
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
 
   return (
     <section 
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 overflow-visible"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-2 md:p-4 overflow-visible"
     >
       {projectElements}
     </section>

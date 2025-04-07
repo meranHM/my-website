@@ -1,7 +1,7 @@
 import CommandInput from "./CommandInput"
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import CommandOutput from "./landing/CommandOutput"
+import CommandOutput from "./CommandOutput"
 import { useSelector } from "react-redux"
 import { RootState } from "../store/store"
 import { HeaderTerminalProps } from "../types/types"

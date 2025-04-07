@@ -45,24 +45,24 @@ const Footer = () => {
     
 
     <footer
-      className="mt-12 mb-2 py-2 container flex flex-col items-start gap-10 max-sm:flex-col bg-color-footerBlack border-t-[2px] border-[#00ffff4d] tracking-wider"
+      className="mt-6 md:mt-10 mb-2 py-2 container flex flex-col items-start gap-10 max-sm:flex-col bg-color-footerBlack border-t-[2px] border-[#00ffff4d] tracking-wider"
     >
       <div
-        className="flex w-full gap-x-10 lg:justify-between"
+        className="flex flex-col md:flex-row w-full gap-y-10 md:gap-x-10 lg:justify-between"
       >
-        <div>
+        <div className="text-sm md:text-lg text-center">
           <p>-----------------------------------</p>
-          <p>SYSTEM STATUS:&nbsp;
+          <p className="text-nowrap">SYSTEM STATUS:&nbsp;
             <span className="text-color-neonPurple font-bold ">
             ONLINE ✅
             </span>
           </p>
-          <p>UPTIME:&nbsp;
+          <p className="text-nowrap">UPTIME:&nbsp;
             <span className="text-color-neonPurple font-bold ">
               {uptime} SECONDS
             </span>
           </p>
-          <p>SECURITY LEVEL:&nbsp;
+          <p className="text-nowrap">SECURITY LEVEL:&nbsp;
             <span className="text-color-neonPurple font-bold ">
               ENCRYPTED 🔒
             </span>
@@ -71,7 +71,7 @@ const Footer = () => {
 
         </div>
         <div
-          className="text-sm text-color-neonGreen text-center max-w-[400px] mx-auto h-[100px] gap-2 my-auto overflow-hidden flex flex-col justify-center"
+          className="text-sm text-color-neonGreen text-center max-w-[400px] mx-auto h-[100px] gap-1 my-auto overflow-hidden flex flex-col justify-center"
         >
           {logs.map((log, index) => (
             <p 
@@ -86,7 +86,7 @@ const Footer = () => {
       <div
         className="flex flex-col items-center justify-center w-full "
       >
-        <p>&copy; {currentYear} Mehran Shahani | All Rights Reserved</p>
+        <p className="text-nowrap text-xs md:text-base lg:text-lg">&copy; {currentYear} Mehran Shahani | All Rights Reserved</p>
       </div>
     </footer>
   )

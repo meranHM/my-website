@@ -22,7 +22,7 @@ const SkillSet = () => {
     
   return (
     <div 
-        className="relative p-6 border-2 border-color-neonGreen bg-black/80 rounded-lg shadow-color-neonGreen"
+        className="relative p-4 md:p-6 border-2 border-color-neonGreen bg-black/80 rounded-lg shadow-color-neonGreen"
         ref={containerRef}
     >
         <div
@@ -35,13 +35,13 @@ const SkillSet = () => {
             />
         </div>
         <pre 
-            className="text-color-neonGreen text-xs md:text-lg tracking-widest font-mono mt-2 overflow-hidden"
+            className="text-color-neonGreen text-wrap text-xs md:text-lg tracking-widest font-mono mt-2 overflow-hidden"
         >
             {isInview ? logs[logIndex] : ""}
         </pre>
 
         <div
-            className="mt-4 space-y-2"
+            className="mt-2 md:mt-4 space-y-2"
         >
             {skillSet.map((skill, index) => (
                 <div
@@ -64,7 +64,7 @@ const SkillSet = () => {
         </div>
         {scanComplete && isInview && (
             <p
-                className="text-color-neonGreen text-center mt-4 text-lg font-bold"
+                className="text-color-neonGreen text-center mt-2 md:mt-4 text-sm md:text-lg font-bold"
             >
                 SYSTEM STABLE ⚡
             </p>
