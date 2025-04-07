@@ -10,7 +10,7 @@ const RetroTransition = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             dispatch(activateRetro())
-        }, 3000)
+        }, 4100)
 
         return () => clearTimeout(timer)
     }, [dispatch])
@@ -41,7 +41,7 @@ const RetroTransition = () => {
                 className="h-full bg-green-500"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 3.5 }}
+                transition={{ duration: 4 }}
             />
         </motion.div>
         <RetroFlicker />

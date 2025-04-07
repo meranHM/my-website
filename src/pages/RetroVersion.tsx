@@ -3,6 +3,12 @@ import { deactivateRetro } from "../store/slices/retroSlice"
 
 const RetroVersion = () => {
   const dispatch = useDispatch()
+  const date = new Date()
+  const formattedDate = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
 
   const handleExitRetro = () => {
     document.body.classList.remove("bg-white")
@@ -10,11 +16,15 @@ const RetroVersion = () => {
   }
 
     return (
-      <div className="text-black min-h-screen font-serif bg-[#fefefe] px-4 py-8 max-w-3xl mx-auto">
+      <div className="text-black min-h-screen font-serif bg-[#fefefe] px-4 py-8 max-w-3xl mx-auto border-r-2 border-l-2">
         <header className="text-center border-b border-black pb-4 mb-6">
           <h1 className="text-4xl font-bold uppercase">The Mehran Times</h1>
           <p className="text-sm mt-2">Est. 2025 | Web Developer Edition</p>
         </header>
+
+        <p className="italic text-sm text-gray-600 mt-1">Published: {formattedDate}</p>
+        <hr className="my-4 border-black" />
+
   
         <section className="mb-10">
           <h2 className="text-2xl font-bold uppercase border-b border-black mb-2">About the Developer</h2>
@@ -24,6 +34,19 @@ const RetroVersion = () => {
             front-end technologies like React, Redux, Next.js, TypeScript, and Tailwind CSS. In this
             newspaper-style page, we honor the simplicity of the early web.
           </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold uppercase border-b border-black mb-2">Technical Skillset</h2>
+          <ul className="list-disc list-inside leading-relaxed">
+            <li><strong>Languages:</strong> JavaScript, TypeScript, HTML5, CSS3</li>
+            <li><strong>Frameworks & Libraries:</strong> React, Redux, Next.js</li>
+            <li><strong>Styling:</strong> Tailwind CSS, Sass, Responsive Design</li>
+            <li><strong>Tools & Practices:</strong> Git, GitHub, VSCode, REST APIs, Debugging</li>
+            <li><strong>State Management:</strong> Redux Toolkit, Context API</li>
+            <li><strong>Animations:</strong> Framer Motion, GSAP (beginner)</li>
+            <li><strong>Soft Skills:</strong> Problem-Solving, Teamwork, Curiosity, UI/UX Attention</li>
+          </ul>
         </section>
   
         <section className="mb-10">
