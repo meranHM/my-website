@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { skills } from "../../constants"
 import SkillCard from "./SkillCard"
 
@@ -15,7 +16,13 @@ const SkillsetModules = () => {
                     <p className="text-xs md:text-sm text-gray-400 text-center">{skill.status}</p>
                     <div className="mt-2 space-y-2 z-[999]">
                         {skill.items.map((skill, i) => (
+                           <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3, delay: i * 0.2 }}
+                           >
                             <SkillCard key={i} skill={skill}/>
+                           </motion.div>
                         ))}
                     </div>
                 </div>

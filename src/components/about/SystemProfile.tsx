@@ -5,7 +5,7 @@ import avatar from "../../assets/avatar.png"
 const SystemProfile = () => {
   return (
     <motion.section
-        className="relative max-w-3xl mx-auto p-6 bg-color-terminalBlack border border-color-neonGreen rounded-lg shadow-lg text-color-neonGreen text-sm md:text-lg tracking-wider"
+        className="relative max-w-3xl mx-auto p-6 bg-color-terminalBlack border border-color-neonGreen rounded-lg shadow-lg overflow-hidden text-color-neonGreen text-sm md:text-lg tracking-wider"
     >
         <motion.div
             className="absolute inset-0 bg-black/80 flex items-center justify-center text-center text-color-neonGreen text-lg md:text-2xl font-bold"
